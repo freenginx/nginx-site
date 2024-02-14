@@ -8,7 +8,7 @@
 <article name="nginx: скачать"
          link="/ru/download.html"
          lang="ru"
-         rev="3">
+         rev="4">
 
 
 <section name="Основная версия">
@@ -39,17 +39,13 @@
 <list type="bullet">
 
 <listitem>
-код: <literal>http://hg.nginx.org/nginx</literal>
+код: <literal>http://freenginx.org/hg/nginx</literal>
 </listitem>
 <listitem>
-сайт: <literal>http://hg.nginx.org/nginx.org</literal>
+сайт: <literal>http://freenginx.org/hg/nginx-site</literal>
 </listitem>
 
 </list>
-</para>
-
-<para>
-<link url="http://trac.nginx.org/nginx/browser">Исходный код в Trac</link>
 </para>
 
 </section>
