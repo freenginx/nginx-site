@@ -8,13 +8,14 @@
 <article name="nginx security advisories"
          link="/en/security_advisories.html"
          lang="en"
-         rev="1">
+         rev="2">
 
 <section>
 
 <para>
 All nginx security issues should be reported to
-<link url="mailto:security-alert@nginx.org">security-alert@nginx.org</link>.
+<link url="mailto:security-alert@freenginx.org">
+security-alert@freenginx.org</link>.
 </para>
 
 <para>
