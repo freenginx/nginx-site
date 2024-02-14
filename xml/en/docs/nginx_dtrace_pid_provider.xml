@@ -9,7 +9,7 @@
 <article name="Debugging nginx with DTrace pid provider"
 	link="/en/docs/nginx_dtrace_pid_provider.html"
 	lang="en"
-	rev="4"
+	rev="5"
 	toc="no">
 
 <section>
@@ -134,12 +134,7 @@ declarations of callback functions and definitions of constants.
 </para>
 
 <para>
-The final DTrace script can be downloaded from
-<link url="http://nginx.org/download/trace_process_request.d">here</link>.
-</para>
-
-<para>
-The following example shows the output of running this script:
+The following example shows the output of running the resulting script:
 
 <programlisting>
 # dtrace -C -I ./objs -s trace_process_request.d -p 4848
