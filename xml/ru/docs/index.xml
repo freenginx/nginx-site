@@ -8,7 +8,7 @@
 <article name="nginx: документация"
          link="/ru/docs/"
          lang="ru"
-         rev="50"
+         rev="51"
          toc="no">
 
 
@@ -27,10 +27,6 @@
 
 <listitem>
 <link doc="beginners_guide.xml"/>
-</listitem>
-
-<listitem>
-<link url="https://www.nginx.com/resources/admin-guide/">Руководство администратора</link> [en]
 </listitem>
 
 <listitem>
@@ -129,10 +125,6 @@
 <listitem>
 <link doc="../../en/docs/howto_build_on_win32.xml">Сборка nginx
 на платформе Win32 компилятором Visual C</link> [en]
-</listitem>
-
-<listitem>
-<link url="https://www.nginx.com/resources/admin-guide/setting-nginx-plus-environment-amazon-ec2/">Настройка окружения NGINX Plus на Amazon EC2</link> [en]
 </listitem>
 
 <listitem>

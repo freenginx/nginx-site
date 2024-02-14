@@ -8,7 +8,7 @@
 <article name="nginx documentation"
          link="/en/docs/"
          lang="en"
-         rev="50"
+         rev="51"
          toc="no">
 
 
@@ -27,10 +27,6 @@
 
 <listitem>
 <link doc="beginners_guide.xml"/>
-</listitem>
-
-<listitem>
-<link url="https://www.nginx.com/resources/admin-guide/">Admin’s Guide</link>
 </listitem>
 
 <listitem>
@@ -127,10 +123,6 @@
 
 <listitem>
 <link doc="howto_build_on_win32.xml"/>
-</listitem>
-
-<listitem>
-<link url="https://www.nginx.com/resources/admin-guide/setting-nginx-plus-environment-amazon-ec2/">Setting up NGINX Plus environment on Amazon EC2</link>
 </listitem>
 
 <listitem>
