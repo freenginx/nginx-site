@@ -17,9 +17,6 @@ X:template body (lang) {
 
     <body>
 
-    <div id="banner">
-    </div>
-
     <div id="main">
     <div id="menu">
         <h1>

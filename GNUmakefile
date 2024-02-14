@@ -1,7 +1,6 @@
 
 OUT =		libxslt
 TEXT =		text
-BANNER =	banner
 ZIP =		gzip
 NGINX_ORG =	/data/www/nginx.org
 SHELL =		./umasked.sh
@@ -46,7 +45,6 @@ COMMON_DEPS =								\
 		xslt/style.xslt						\
 		xslt/body.xslt						\
 		xslt/menu.xslt						\
-		xslt/banner.xslt					\
 		xslt/content.xslt					\
 
 ARTICLE_DEPS =								\
@@ -314,15 +312,14 @@ gzip:	rsync_gzip
 	$(MAKE) do_gzip
 
 rsync_gzip:
-	$(CHMOD) $(OUT) $(TEXT) $(BANNER)
-	$(RSYNC) --delete --exclude='*.gz' $(OUT)/ $(TEXT)/ $(BANNER) $(ZIP)/
+	$(CHMOD) $(OUT) $(TEXT)
+	$(RSYNC) --delete --exclude='*.gz' $(OUT)/ $(TEXT)/ $(ZIP)/
 
 do_gzip:	$(addsuffix .gz, $(wildcard $(ZIP)/*.html))		\
 		$(addsuffix .gz,					\
 			$(foreach lang, $(LANGS),			\
 			$(foreach dir, . docs docs/dev docs/faq docs/http docs/mail docs/njs docs/stream, \
 			$(wildcard $(ZIP)/$(lang)/$(dir)/*.html))))	\
-		$(addsuffix .gz, $(wildcard $(ZIP)/$(BANNER)/*.html))	\
 		$(ZIP)/index.rss.gz					\
 		$(ZIP)/LICENSE.gz					\
 		$(ZIP)/en/CHANGES.gz					\

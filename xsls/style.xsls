@@ -15,12 +15,6 @@ X:template style (lang) {
                             text-align:     center;
                             margin:         0;
                             padding:        0; }
-        #banner           { background:     black;
-                            color:          #F2F2F2;
-                            line-height:    1.2em;
-                            padding:        .3em 0;
-                            box-shadow:     0 5px 10px black; }
-        #banner a         { color:          #00B140; }
         #main             { text-align:     left;
                             margin:         0 auto;
                             min-width:      32em;
