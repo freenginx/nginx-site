@@ -42,7 +42,7 @@ code.
 Commit the changes to create a Mercurial
 <link url="https://www.mercurial-scm.org/wiki/ChangeSet">changeset</link>.
 Please ensure that the specified
-<link url="https://www.mercurial-scm.org/wiki/QuickStart#Setting_a_username">e-mail</link>
+<link url="https://www.mercurial-scm.org/wiki/QuickStart#Setting_a_username">email</link>
 address and real name of the change’s author are correct.
 </para>
 
