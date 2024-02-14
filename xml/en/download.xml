@@ -8,7 +8,7 @@
 <article name="nginx: download"
          link="/en/download.html"
          lang="en"
-         rev="2">
+         rev="3">
 
 
 <section name="Mainline version">
@@ -50,16 +50,6 @@ site: <literal>http://hg.nginx.org/nginx.org</literal>
 
 <para>
 <link url="http://trac.nginx.org/nginx/browser">Trac source browser</link>
-</para>
-
-</section>
-
-
-<section name="Pre-Built Packages">
-
-<para>
-Linux packages for
-<link doc="linux_packages.xml">stable and mainline</link> versions.
 </para>
 
 </section>

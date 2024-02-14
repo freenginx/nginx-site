@@ -8,7 +8,7 @@
 <article name="Установка nginx"
          link="/ru/docs/install.html"
          lang="ru"
-         rev="3"
+         rev="4"
          toc="no">
 
 <section>
@@ -24,7 +24,7 @@ nginx устанавливается по-разному в зависимост
 
 <para>
 Для установки nginx на Linux могут быть использованы
-<link doc="../linux_packages.xml">пакеты</link> с nginx.org.
+пакеты, предоставляемые дистрибутивом.
 </para>
 
 </section>

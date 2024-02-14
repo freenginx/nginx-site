@@ -8,7 +8,7 @@
 <article name="nginx: скачать"
          link="/ru/download.html"
          lang="ru"
-         rev="2">
+         rev="3">
 
 
 <section name="Основная версия">
@@ -50,16 +50,6 @@
 
 <para>
 <link url="http://trac.nginx.org/nginx/browser">Исходный код в Trac</link>
-</para>
-
-</section>
-
-
-<section name="Готовые пакеты">
-
-<para>
-Пакеты для Linux
-<link doc="linux_packages.xml">стабильной и основной</link> версий.
 </para>
 
 </section>

@@ -8,7 +8,7 @@
 <article name="Отладочный лог"
          link="/ru/docs/debugging_log.html"
          lang="ru"
-         rev="6">
+         rev="7">
 
 
 <section>
@@ -35,17 +35,6 @@ error_log /path/to/log debug;
 configure arguments: --with-debug ...
 </programlisting>
 
-Готовые пакеты для <link doc="../linux_packages.xml">Linux</link>
-по умолчанию предоставляют поддержку отладочного лога
-при помощи бинарного файла <literal>nginx-debug</literal> (1.9.8),
-который можно запустить при помощи команд
-
-<programlisting>
-service nginx stop
-service nginx-debug start
-</programlisting>
-
-и затем задать уровень <literal>debug</literal>.
 Бинарная версия nginx для Windows всегда собирается с поддержкой отладочного
 лога, поэтому понадобится лишь задать уровень <literal>debug</literal>.
 </para>

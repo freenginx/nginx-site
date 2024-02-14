@@ -8,7 +8,7 @@
 <article name="Installing nginx"
          link="/en/docs/install.html"
          lang="en"
-         rev="3"
+         rev="4"
          toc="no">
 
 <section>
@@ -23,8 +23,7 @@ nginx can be installed differently, depending on the operating system.
 <section id="linux" name="Installation on Linux">
 
 <para>
-For Linux, nginx <link doc="../linux_packages.xml">packages</link>
-from nginx.org can be used.
+For Linux, packages provided by the distribution can be used.
 </para>
 
 </section>

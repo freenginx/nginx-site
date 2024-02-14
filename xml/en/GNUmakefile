@@ -120,4 +120,3 @@ TOP =									\
 		books							\
 		support							\
 		donation						\
-		linux_packages						\
