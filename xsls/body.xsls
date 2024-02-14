@@ -7,20 +7,11 @@ X:stylesheet {
 
 X:template body (lang) {
 
-    X:variable MENU_ALIGN = {
-        X:if "$lang = 'he'" { X:text {left} } else { X:text {right} }
-    }
-
-    X:variable INDEX_ALIGN = {
-        X:if "$lang = 'he'" { X:text {right} } else { X:text {left} }
-    }
-
     <body>
 
     <div id="main">
     <div id="menu">
         <h1>
-            X:if "@lang = 'he'" { X:attribute "align" { X:text{left} } }
             <a href="/">
                 <img src="/nginx.png" alt="nginx" />
             </a>
@@ -42,8 +33,6 @@ X:template body (lang) {
         {
             <span>
 
-            X:if "@lang = 'he'" { X:attribute "class" { X:text{ltr} } }
-
             <blockquote class="note">
 
             X:if "document(concat($XML, '/i18n.xml'))
@@ -60,7 +49,7 @@ X:template body (lang) {
         }
 
         X:if "@toc = 'yes' and section[@id and @name]" {
-            <table width="100%"><tr><td align="{$INDEX_ALIGN}">
+            <table width="100%"><tr><td>
             X:for-each "section[@id and @name]" {
                 <a href="#{@id}"> !{@name} </a><br/>
                 X:for-each "section[@id and @name]" {

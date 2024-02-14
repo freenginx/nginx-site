@@ -43,47 +43,4 @@ for recent changes.</item>
 для ознакомления с последними изменениями.</item>
 </text>
 
-<text lang="cn">
-<item id="and">和</item>
-<item id="author">作者:</item>
-<item id="editor">编辑:</item>
-<item id="translator">翻译:</item>
-<item id="syntax">语法</item>
-<item id="default">默认值</item>
-<item id="context">上下文</item>
-<item id="context.any">任意</item>
-<item id="directive.version">这个指令出现在版本</item>
-<item id="directive.versions">这个指令出现在版本</item>
-<item id="dirindex">指令目录</item>
-<item id="outdated">翻译内容可能已经过旧。
-你可以通过 <origin>英文版本</origin>
-查看最近的更新。</item>
-</text>
-
-<text lang="ja">
-<item id="author">作成:</item>
-<item id="translator">翻訳:</item>
-</text>
-
-<text lang="he">
-<item id="author">נכתב על ידי</item>
-<item id="translator">תורגם על ידי</item>
-</text>
-
-<text lang="tr">
-<item id="author">yazan:</item>
-<item id="translator">çeviren:</item>
-</text>
-
-<text lang="it">
-<item id="and">e</item>
-<item id="author">scritto da</item>
-<item id="editor">a cura di</item>
-<item id="translator">tradotto da</item>
-<item id="dirindex">Elenco alfabetico delle direttive</item>
-<item id="outdated">Questa traduzione potrebbe essere obsoleta.
-Verifica la <origin>versione in inglese</origin>
-per gli aggiornamenti piu' recenti.</item>
-</text>
-
 </i18n>
