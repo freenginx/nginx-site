@@ -10,7 +10,7 @@
                instead I am getting &ldquo;Welcome to nginx!&rdquo; page"
          link="/en/docs/welcome_nginx_facebook.html"
          lang="en"
-         rev="3">
+         rev="4">
 
 
 <section>
@@ -47,7 +47,7 @@ web server in the world, it’s being used by over 126,000,000 (or
 14% of the Internet) websites. Most of these websites are
 legitimate, but some aren’t. Our software was created with a good
 reason of enabling performance and scalability on the Internet,
-it is licensed under <link url="http://nginx.org/LICENSE">
+it is licensed under <link url="../../LICENSE">
 popular open source license</link>, and has nothing to do with any
 kind of threatening or malicious activity per se &#8212;
 nginx is NOT a malware, and it is NOT on your computer. But someone’s
