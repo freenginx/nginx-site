@@ -27,7 +27,6 @@
 <xsl:include href="style.xslt"/>
 <xsl:include href="body.xslt"/>
 <xsl:include href="menu.xslt"/>
-<xsl:include href="banner.xslt"/>
 <xsl:include href="content.xslt"/>
 <xsl:include href="books.xslt"/>
 <xsl:include href="directive.xslt"/>
@@ -40,15 +39,11 @@
 <xsl:template match="/article | /module">
     <html>
 
-    <xsl:if test="@lang = 'he'"> <xsl:attribute name="dir"> <xsl:text>rtl</xsl:text> </xsl:attribute> </xsl:if>
-
-    <xsl:if test="@lang = 'cn'"> <xsl:attribute name="lang"> <xsl:text>zh-CN</xsl:text> </xsl:attribute> </xsl:if>
-
     <head>
 
     <title> <xsl:value-of select="@name"/> </title>
 
-    <xsl:call-template name="style"><xsl:with-param select="@lang" name="lang"/></xsl:call-template><xsl:call-template name="banner"/></head>
+    <xsl:call-template name="style"><xsl:with-param select="@lang" name="lang"/></xsl:call-template></head>
 
     <xsl:call-template name="body"><xsl:with-param select="@lang" name="lang"/></xsl:call-template></html>
 </xsl:template>

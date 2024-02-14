@@ -16,12 +16,6 @@
                             text-align:     center;
                             margin:         0;
                             padding:        0; }
-        #banner           { background:     black;
-                            color:          #F2F2F2;
-                            line-height:    1.2em;
-                            padding:        .3em 0;
-                            box-shadow:     0 5px 10px black; }
-        #banner a         { color:          #00B140; }
         #main             { text-align:     left;
                             margin:         0 auto;
                             min-width:      32em;
@@ -106,26 +100,6 @@
                             width:100%;
                             height:100%; }
         ') "/>
-
-    <xsl:if test="$lang = 'he'">
-        <xsl:value-of select=" normalize-space('
-        pre               { text-align:     left;
-                            direction:      ltr; }
-        code              { direction:      ltr;
-                            unicode-bidi:   embed; }
-        .ltr              { direction:      ltr;
-                            unicode-bidi:   embed; }
-        ') "/>
-    </xsl:if>
-
-    <xsl:if test="$lang = 'cn'">
-        <xsl:value-of select=" normalize-space('
-        p                 { text-align:     left; }
-        li                { text-align:     left; }
-        dd                { text-align:     left; }
-        blockquote.note   { text-align:     left; }
-        ') "/>
-    </xsl:if>
 
     </style>
 </xsl:template>

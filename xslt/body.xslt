@@ -8,23 +8,11 @@
 
 <xsl:template name="body"><xsl:param name="lang"/>
 
-    <xsl:variable name="MENU_ALIGN">
-        <xsl:choose><xsl:when test="$lang = 'he'"> <xsl:text>left</xsl:text> </xsl:when><xsl:otherwise> <xsl:text>right</xsl:text> </xsl:otherwise></xsl:choose>
-    </xsl:variable>
-
-    <xsl:variable name="INDEX_ALIGN">
-        <xsl:choose><xsl:when test="$lang = 'he'"> <xsl:text>right</xsl:text> </xsl:when><xsl:otherwise> <xsl:text>left</xsl:text> </xsl:otherwise></xsl:choose>
-    </xsl:variable>
-
     <body>
-
-    <div id="banner">
-    </div>
 
     <div id="main">
     <div id="menu">
         <h1>
-            <xsl:if test="@lang = 'he'"> <xsl:attribute name="align"> <xsl:text>left</xsl:text> </xsl:attribute> </xsl:if>
             <a href="/">
                 <img src="/nginx.png" alt="nginx"/>
             </a>
@@ -45,8 +33,6 @@
               @rev != document(concat($XML, '/', $ORIGIN))/*/@rev)">
             <span>
 
-            <xsl:if test="@lang = 'he'"> <xsl:attribute name="class"> <xsl:text>ltr</xsl:text> </xsl:attribute> </xsl:if>
-
             <blockquote class="note">
 
             <xsl:choose><xsl:when test="document(concat($XML, '/i18n.xml'))
@@ -63,7 +49,7 @@
         </xsl:if>
 
         <xsl:if test="@toc = 'yes' and section[@id and @name]">
-            <table width="100%"><tr><td align="{$INDEX_ALIGN}">
+            <table width="100%"><tr><td>
             <xsl:for-each select="section[@id and @name]">
                 <a href="#{@id}"> <xsl:value-of select="@name"/> </a><br/>
                 <xsl:for-each select="section[@id and @name]">
