@@ -9,7 +9,7 @@
 <article name="Examples"
         link="/en/docs/njs/examples.html"
         lang="en"
-        rev="21">
+        rev="22">
 
 <section id="summary">
 
@@ -198,72 +198,6 @@ export default {jwt_payload_sub};
 <section id="http_proxying" name="HTTP Proxying">
 
 
-<section id="subrequest" name="Accessing API from a Subrequest">
-
-<para>
-<path>nginx.conf</path>:
-<example>
-js_import http.js;
-
-keyval_zone zone=foo:10m;
-#...
-
-location /keyval {
-    js_content http.set_keyval;
-}
-
-location /version {
-    js_content http.version;
-}
-
-location /api {
-    api write=on;
-}
-</example>
-</para>
-
-<para>
-<path>http.js</path>:
-<example>
-async function set_keyval(r) {
-    let res = await r.subrequest('/api/7/http/keyvals/foo',
-        { method: 'POST',
-          body: JSON.stringify({ foo: 789, bar: "ss dd 00" })});
-
-    if (res.status >= 300) {
-        r.return(res.status, res.responseBody);
-        return;
-    }
-
-    r.return(200);
-}
-
-async function version(r) {
-    let res = await r.subrequest('/api/7/nginx', { method: 'GET' });
-
-    if (res.status != 200) {
-        r.return(res.status);
-        return;
-    }
-
-    var json = JSON.parse(res.responseBody);
-    r.return(200, json.version);
-}
-
-export default {set_keyval, version};
-</example>
-<note>
-The <link doc="../http/ngx_http_keyval_module.xml" id="keyval"/>,
-<link doc="../http/ngx_http_keyval_module.xml" id="keyval_zone"/>,
-and <link doc="../http/ngx_http_api_module.xml" id="api"/> directives
-are available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
-</para>
-
-</section>
-
-
 <section id="fast_response" name="Returning Fastest Response from Proxy">
 
 <para>
@@ -389,56 +323,6 @@ function redirect(r) {
 
 export default {redirect};
 </example>
-</para>
-
-</section>
-
-
-<section id="requests" name="Logging the Number of Requests Per Client">
-
-<para>
-<path>nginx.conf</path>:
-<example>
-js_import http.js;
-
-js_set $num_requests http.num_requests;
-
-keyval_zone zone=foo:10m;
-
-keyval $remote_addr $foo zone=foo;
-
-log_format bar '$remote_addr [$time_local] $num_requests';
-access_log logs/access.log bar;
-
-server {
-    listen 8000;
-
-    location / {
-        root html;
-    }
-}
-</example>
-</para>
-
-<para>
-<path>http.js</path>:
-<example>
-function num_requests(r)
-{
-    var n = r.variables.foo;
-    n = n ? Number(n) + 1 : 1;
-    r.variables.foo = n;
-    return n;
-}
-
-export default {num_requests};
-</example>
-<note>
-The <link doc="../http/ngx_http_keyval_module.xml" id="keyval"/> and
-<link doc="../http/ngx_http_keyval_module.xml" id="keyval_zone"/> directives
-are available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
 </para>
 
 </section>

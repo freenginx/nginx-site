@@ -8,7 +8,7 @@
 <article name="nginx: документация"
          link="/ru/docs/"
          lang="ru"
-         rev="49"
+         rev="50"
          toc="no">
 
 
@@ -224,18 +224,8 @@ ngx_http_addition_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_api_module.xml">
-ngx_http_api_module</link> [en]
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_auth_basic_module.xml">
 ngx_http_auth_basic_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_auth_jwt_module.xml">
-ngx_http_auth_jwt_module</link>
 </listitem>
 
 <listitem>
@@ -266,11 +256,6 @@ ngx_http_dav_module</link>
 <listitem>
 <link doc="http/ngx_http_empty_gif_module.xml">
 ngx_http_empty_gif_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_f4f_module.xml">
-ngx_http_f4f_module</link>
 </listitem>
 
 <listitem>
@@ -319,11 +304,6 @@ ngx_http_headers_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_hls_module.xml">
-ngx_http_hls_module</link>
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_image_filter_module.xml">
 ngx_http_image_filter_module</link>
 </listitem>
@@ -334,18 +314,8 @@ ngx_http_index_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_internal_redirect_module.xml">
-ngx_http_internal_redirect_module</link>
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_js_module.xml">
 ngx_http_js_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_keyval_module.xml">
-ngx_http_keyval_module</link> [en]
 </listitem>
 
 <listitem>
@@ -394,11 +364,6 @@ ngx_http_proxy_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_proxy_protocol_vendor_module.xml">
-ngx_http_proxy_protocol_vendor_module</link>
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_random_index_module.xml">
 ngx_http_random_index_module</link>
 </listitem>
@@ -429,11 +394,6 @@ ngx_http_secure_link_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_session_log_module.xml">
-ngx_http_session_log_module</link> [en]
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_slice_module.xml">
 ngx_http_slice_module</link>
 </listitem>
@@ -454,11 +414,6 @@ ngx_http_ssl_module</link>
 </listitem>
 
 <listitem>
-<link doc="http/ngx_http_status_module.xml">
-ngx_http_status_module</link>
-</listitem>
-
-<listitem>
 <link doc="http/ngx_http_stub_status_module.xml">
 ngx_http_stub_status_module</link>
 </listitem>
@@ -471,16 +426,6 @@ ngx_http_sub_module</link>
 <listitem>
 <link doc="http/ngx_http_upstream_module.xml">
 ngx_http_upstream_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_upstream_conf_module.xml">
-ngx_http_upstream_conf_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_upstream_hc_module.xml">
-ngx_http_upstream_hc_module</link>
 </listitem>
 
 <listitem>
@@ -587,11 +532,6 @@ ngx_stream_js_module</link>
 </listitem>
 
 <listitem>
-<link doc="stream/ngx_stream_keyval_module.xml">
-ngx_stream_keyval_module</link> [en]
-</listitem>
-
-<listitem>
 <link doc="stream/ngx_stream_limit_conn_module.xml">
 ngx_stream_limit_conn_module</link>
 </listitem>
@@ -607,23 +547,8 @@ ngx_stream_map_module</link>
 </listitem>
 
 <listitem>
-<link doc="stream/ngx_stream_mqtt_preread_module.xml">
-ngx_stream_mqtt_preread_module</link>
-</listitem>
-
-<listitem>
-<link doc="stream/ngx_stream_mqtt_filter_module.xml">
-ngx_stream_mqtt_filter_module</link>
-</listitem>
-
-<listitem>
 <link doc="stream/ngx_stream_proxy_module.xml">
 ngx_stream_proxy_module</link>
-</listitem>
-
-<listitem>
-<link doc="stream/ngx_stream_proxy_protocol_vendor_module.xml">
-ngx_stream_proxy_protocol_vendor_module</link>
 </listitem>
 
 <listitem>
@@ -661,16 +586,6 @@ ngx_stream_ssl_preread_module</link>
 ngx_stream_upstream_module</link>
 </listitem>
 
-<listitem>
-<link doc="stream/ngx_stream_upstream_hc_module.xml">
-ngx_stream_upstream_hc_module</link>
-</listitem>
-
-<listitem>
-<link doc="stream/ngx_stream_zone_sync_module.xml">
-ngx_stream_zone_sync_module</link> [en]
-</listitem>
-
 </list>
 </para>
 
@@ -680,16 +595,6 @@ ngx_stream_zone_sync_module</link> [en]
 <listitem>
 <link doc="ngx_google_perftools_module.xml">
 ngx_google_perftools_module</link>
-</listitem>
-
-<listitem>
-<link doc="ngx_mgmt_module.xml">
-ngx_mgmt_module</link> [en]
-</listitem>
-
-<listitem>
-<link doc="ngx_otel_module.xml">
-ngx_otel_module [en]</link>
 </listitem>
 
 </list>

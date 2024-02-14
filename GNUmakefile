@@ -170,10 +170,6 @@ xslt/%.xslt:	xsls/%.xsls
 	$(call XSLScript, $<, $@)
 
 
-genapi:
-	$(MAKE) -C yaml
-
-
 images:									\
 		binary/books/nginx_cookbook.jpg				\
 		binary/books/nginx_http_server_3rd_ed.jpg		\

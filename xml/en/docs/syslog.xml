@@ -96,9 +96,6 @@ access_log syslog:server=[2001:db8::1]:12345,facility=local7,tag=nginx,severity=
 <para>
 <note>
 Logging to syslog is available since version 1.7.1.
-As part of our
-<commercial_version>commercial subscription</commercial_version>
-logging to syslog is available since version 1.5.3.
 </note>
 </para>
 

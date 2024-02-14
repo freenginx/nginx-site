@@ -29,7 +29,6 @@ REFS =									\
 		http/ngx_http_access_module				\
 		http/ngx_http_addition_module				\
 		http/ngx_http_auth_basic_module				\
-		http/ngx_http_auth_jwt_module				\
 		http/ngx_http_auth_request_module			\
 		http/ngx_http_autoindex_module				\
 		http/ngx_http_browser_module				\
@@ -38,7 +37,6 @@ REFS =									\
 		http/ngx_http_dav_module				\
 		http/ngx_http_empty_gif_module				\
 		http/ngx_http_fastcgi_module				\
-		http/ngx_http_f4f_module				\
 		http/ngx_http_flv_module				\
 		http/ngx_http_geo_module				\
 		http/ngx_http_geoip_module				\
@@ -47,10 +45,8 @@ REFS =									\
 		http/ngx_http_gzip_module				\
 		http/ngx_http_gzip_static_module			\
 		http/ngx_http_headers_module				\
-		http/ngx_http_hls_module				\
 		http/ngx_http_image_filter_module			\
 		http/ngx_http_index_module				\
-		http/ngx_http_internal_redirect_module			\
 		http/ngx_http_js_module					\
 		http/ngx_http_limit_conn_module				\
 		http/ngx_http_limit_req_module				\
@@ -62,7 +58,6 @@ REFS =									\
 		http/ngx_http_mp4_module				\
 		http/ngx_http_perl_module				\
 		http/ngx_http_proxy_module				\
-		http/ngx_http_proxy_protocol_vendor_module		\
 		http/ngx_http_random_index_module			\
 		http/ngx_http_realip_module				\
 		http/ngx_http_referer_module				\
@@ -74,12 +69,9 @@ REFS =									\
 		http/ngx_http_split_clients_module			\
 		http/ngx_http_ssi_module				\
 		http/ngx_http_ssl_module				\
-		http/ngx_http_status_module				\
 		http/ngx_http_stub_status_module			\
 		http/ngx_http_sub_module				\
 		http/ngx_http_upstream_module				\
-		http/ngx_http_upstream_conf_module			\
-		http/ngx_http_upstream_hc_module			\
 		http/ngx_http_userid_module				\
 		http/ngx_http_uwsgi_module				\
 		http/ngx_http_v2_module					\
@@ -101,10 +93,7 @@ REFS =									\
 		stream/ngx_stream_limit_conn_module			\
 		stream/ngx_stream_log_module				\
 		stream/ngx_stream_map_module				\
-		stream/ngx_stream_mqtt_filter_module			\
-		stream/ngx_stream_mqtt_preread_module			\
 		stream/ngx_stream_proxy_module				\
-		stream/ngx_stream_proxy_protocol_vendor_module		\
 		stream/ngx_stream_realip_module				\
 		stream/ngx_stream_return_module				\
 		stream/ngx_stream_set_module				\
@@ -112,7 +101,6 @@ REFS =									\
 		stream/ngx_stream_ssl_module				\
 		stream/ngx_stream_ssl_preread_module			\
 		stream/ngx_stream_upstream_module			\
-		stream/ngx_stream_upstream_hc_module			\
 		stream/stream_processing				\
 		ngx_google_perftools_module				\
 		njs/index						\

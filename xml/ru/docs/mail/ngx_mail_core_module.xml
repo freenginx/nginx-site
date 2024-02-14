@@ -10,7 +10,7 @@
 <module name="Модуль ngx_mail_core_module"
         link="/ru/docs/mail/ngx_mail_core_module.html"
         lang="ru"
-        rev="21">
+        rev="22">
 
 <section id="summary">
 
@@ -317,8 +317,7 @@ FreeBSD 9.0-STABLE)
     <value>адрес</value> ...
     [<literal>valid</literal>=<value>time</value>]
     [<literal>ipv4</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>status_zone</literal>=<value>зона</value>]</syntax>
+    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]</syntax>
 <syntax><literal>off</literal></syntax>
 <default>off</default>
 <context>mail</context>
@@ -373,16 +372,6 @@ resolver 127.0.0.1 [::1]:5353 valid=30s;
 Для предотвращения DNS-спуфинга рекомендуется
 использовать DNS-серверы в защищённой доверенной локальной сети.
 </note>
-</para>
-
-<para id="resolver_status_zone">
-Необязательный параметр <literal>status_zone</literal> (1.17.1)
-включает
-<link doc="../http/ngx_http_api_module.xml" id="resolvers_">сбор информации</link>
-о запросах и ответах сервера DNS
-в указанной <value>зоне</value>.
-Параметр доступен как часть
-<commercial_version>коммерческой подписки</commercial_version>.
 </para>
 
 <para id="resolver_off">

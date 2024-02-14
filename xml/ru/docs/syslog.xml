@@ -97,9 +97,6 @@ access_log syslog:server=[2001:db8::1]:12345,facility=local7,tag=nginx,severity=
 <para>
 <note>
 Запись в syslog доступна начиная с версии 1.7.1.
-Как часть
-<commercial_version>коммерческой подписки</commercial_version>
-запись в syslog доступна начиная с версии 1.5.3.
 </note>
 </para>
 

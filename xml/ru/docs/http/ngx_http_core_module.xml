@@ -10,7 +10,7 @@
 <module name="Модуль ngx_http_core_module"
         link="/ru/docs/http/ngx_http_core_module.html"
         lang="ru"
-        rev="106">
+        rev="107">
 
 <section id="directives" name="Директивы">
 
@@ -259,9 +259,8 @@ location /images/ {
 <para>
 Задерживает обработку неавторизованных запросов с кодом ответа 401
 для предотвращения атак по времени в случае ограничения доступа по
-<link doc="ngx_http_auth_basic_module.xml">паролю</link>, по
-<link doc="ngx_http_auth_request_module.xml">результату подзапроса</link>
-или по <link doc="ngx_http_auth_jwt_module.xml">JWT</link>.
+<link doc="ngx_http_auth_basic_module.xml">паролю</link> или по
+<link doc="ngx_http_auth_request_module.xml">результату подзапроса</link>.
 </para>
 
 </directive>
@@ -848,7 +847,6 @@ error_page 404 =301 http://example.com/notfound.html;
 запросы, перенаправленные директивами
 <link id="error_page"/>,
 <link doc="ngx_http_index_module.xml" id="index"/>,
-<link doc="ngx_http_internal_redirect_module.xml" id="internal_redirect"/>,
 <link doc="ngx_http_random_index_module.xml" id="random_index"/> и
 <link id="try_files"/>;
 </listitem>
@@ -1065,11 +1063,8 @@ keep-alive, эти буферы освобождаются.
 Если разрешён метод <literal>GET</literal>, то метод
 <literal>HEAD</literal> также будет разрешён.
 Доступ к остальным методам может быть ограничен при помощи директив модулей
-<link doc="ngx_http_access_module.xml">ngx_http_access_module</link>,
-<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>
-и
-<link doc="ngx_http_auth_jwt_module.xml">ngx_http_auth_jwt_module</link>
-(1.13.10):
+<link doc="ngx_http_access_module.xml">ngx_http_access_module</link> и
+<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>:
 <example>
 limit_except GET {
     allow 192.168.1.0/32;
@@ -2182,8 +2177,7 @@ open_file_cache_events   on;
     <value>адрес</value> ...
     [<literal>valid</literal>=<value>время</value>]
     [<literal>ipv4</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>status_zone</literal>=<value>зона</value>]</syntax>
+    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]</syntax>
 <default/>
 <context>http</context>
 <context>server</context>
@@ -2233,16 +2227,6 @@ resolver 127.0.0.1 [::1]:5353 valid=30s;
 Для предотвращения DNS-спуфинга рекомендуется
 использовать DNS-серверы в защищённой доверенной локальной сети.
 </note>
-</para>
-
-<para id="resolver_status_zone">
-Необязательный параметр <literal>status_zone</literal> (1.17.1)
-включает
-<link doc="ngx_http_api_module.xml" id="resolvers_">сбор информации</link>
-о запросах и ответах сервера DNS
-в указанной <value>зоне</value>.
-Параметр доступен как часть
-<commercial_version>коммерческой подписки</commercial_version>.
 </para>
 
 </directive>
@@ -2311,10 +2295,9 @@ location /i/ {
 Разрешает доступ, если все (<literal>all</literal>)
 или хотя бы один (<literal>any</literal>) из модулей
 <link doc="ngx_http_access_module.xml">ngx_http_access_module</link>,
-<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>,
-<link doc="ngx_http_auth_request_module.xml">ngx_http_auth_request_module</link>
+<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>
 или
-<link doc="ngx_http_auth_jwt_module.xml">ngx_http_auth_jwt_module</link>
+<link doc="ngx_http_auth_request_module.xml">ngx_http_auth_request_module</link>
 разрешают доступ.
 </para>
 
@@ -2666,8 +2649,7 @@ server {
 <syntax>
     <literal>on</literal> |
     <literal>off</literal> |
-    <literal>build</literal> |
-    <value>строка</value></syntax>
+    <literal>build</literal></syntax>
 <default>on</default>
 <context>http</context>
 <context>server</context>
@@ -2682,16 +2664,6 @@ server {
 Если указан параметр <literal>build</literal> (1.11.10),
 то наряду с версией nginx’а будет также выдаваться
 <link doc="../configure.xml" id="build">имя сборки</link>.
-</para>
-
-<para>
-Дополнительно, как часть
-<commercial_version>коммерческой подписки</commercial_version>,
-начиная с версии 1.9.13
-подписи на страницах ошибок и
-значение поля <header>Server</header> заголовка ответа
-можно задать явно с помощью строки с переменными.
-Пустая строка запрещает выдачу поля <header>Server</header>.
 </para>
 
 </directive>

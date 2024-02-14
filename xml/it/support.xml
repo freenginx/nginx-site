@@ -9,33 +9,7 @@
          link="/it/support.html"
          lang="it"
          translator="Angelo Papadia"
-         rev="4">
-
-
-<section name="Supporto commerciale">
-
-<para>
-E' possibile ottenere supporto commerciale per nginx;
-per maggiori informazioni consultare la pagina relativa a
-<link url="http://nginx.com/products.html">nginx.com</link>.
-</para>
-
-</section>
-
-
-<section name="Wiki">
-
-<para>
-<list type="bullet">
-
-<listitem>
-<link url="http://wiki.nginx.org">wiki.nginx.org</link>
-</listitem>
-
-</list>
-</para>
-
-</section>
+         rev="11">
 
 
 <section name="Mailing List">
@@ -70,30 +44,6 @@ Mailing list in russo
 archivio</link>,
 <link url="http://dir.gmane.org/gmane.comp.web.nginx.russian">
 archivio Gmane</link>
-</listitem>
-
-</list>
-</para>
-
-</section>
-
-
-<section name="Forum">
-
-<para>
-<list type="bullet">
-
-<listitem>
-<link url="http://forum.nginx.org">forum.nginx.org</link>
-(integrato da mailing list)
-</listitem>
-
-<listitem>
-<link url="http://www.ruby-forum.com/forum/nginx">
-Forum Ruby</link>
-(integrato da mailing list
-<link url="http://nginx.org/mailman/listinfo/nginx">nginx@nginx.org</link>
-)
 </listitem>
 
 </list>

@@ -8,22 +8,12 @@
 <article name="nginx: donation"
          link="/en/donation.html"
          lang="en"
-         rev="1">
+         rev="2">
 
 <section>
 
 <para>
 Thank you very much for all your support of the nginx project.
-We as a company have created a commercial model to help support
-the ongoing development of the software, so we no longer need to
-ask for charitable donations to support our work.
-If you use and enjoy nginx, and want to support the project please
-consider purchasing one of our paid products and services.
-You can learn more at <link url="https://nginx.com">nginx.com</link>.
-</para>
-
-<para>
-Thank you!
 </para>
 
 </section>

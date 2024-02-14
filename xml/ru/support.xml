@@ -8,18 +8,7 @@
 <article name="nginx: поддержка"
          link="/ru/support.html"
          lang="ru"
-         rev="10">
-
-
-<section name="Коммерческая поддержка">
-
-<para>
-Мы предлагаем
-<link url="https://www.nginx.com/support/">платную техническую поддержку</link>
-для nginx и наших коммерческих продуктов.
-</para>
-
-</section>
+         rev="11">
 
 
 <section name="Списки рассылок">

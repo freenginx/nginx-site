@@ -10,7 +10,7 @@
 <module name="Module ngx_http_core_module"
         link="/en/docs/http/ngx_http_core_module.html"
         lang="en"
-        rev="106">
+        rev="107">
 
 <section id="directives" name="Directives">
 
@@ -260,9 +260,8 @@ location /images/ {
 <para>
 Delays processing of unauthorized requests with 401 response code
 to prevent timing attacks when access is limited by
-<link doc="ngx_http_auth_basic_module.xml">password</link>, by the
-<link doc="ngx_http_auth_request_module.xml">result of subrequest</link>,
-or by <link doc="ngx_http_auth_jwt_module.xml">JWT</link>.
+<link doc="ngx_http_auth_basic_module.xml">password</link> or by the
+<link doc="ngx_http_auth_request_module.xml">result of subrequest</link>.
 </para>
 
 </directive>
@@ -855,7 +854,6 @@ Internal requests are the following:
 requests redirected by the
 <link id="error_page"/>,
 <link doc="ngx_http_index_module.xml" id="index"/>,
-<link doc="ngx_http_internal_redirect_module.xml" id="internal_redirect"/>,
 <link doc="ngx_http_random_index_module.xml" id="random_index"/>, and
 <link id="try_files"/> directives;
 </listitem>
@@ -1070,11 +1068,8 @@ or
 Allowing the <literal>GET</literal> method makes the
 <literal>HEAD</literal> method also allowed.
 Access to other methods can be limited using the
-<link doc="ngx_http_access_module.xml">ngx_http_access_module</link>,
-<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>,
-and
-<link doc="ngx_http_auth_jwt_module.xml">ngx_http_auth_jwt_module</link>
-(1.13.10)
+<link doc="ngx_http_access_module.xml">ngx_http_access_module</link> and
+<link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>
 modules directives:
 <example>
 limit_except GET {
@@ -2186,8 +2181,7 @@ closed normally.
     <value>address</value> ...
     [<literal>valid</literal>=<value>time</value>]
     [<literal>ipv4</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>status_zone</literal>=<value>zone</value>]</syntax>
+    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]</syntax>
 <default/>
 <context>http</context>
 <context>server</context>
@@ -2235,16 +2229,6 @@ and nginx always cached answers for the duration of 5 minutes.
 To prevent DNS spoofing, it is recommended
 configuring DNS servers in a properly secured trusted local network.
 </note>
-</para>
-
-<para id="resolver_status_zone">
-The optional <literal>status_zone</literal> parameter (1.17.1)
-enables
-<link doc="ngx_http_api_module.xml" id="resolvers_">collection</link>
-of DNS server statistics of requests and responses
-in the specified <value>zone</value>.
-The parameter is available as part of our
-<commercial_version>commercial subscription</commercial_version>.
 </para>
 
 </directive>
@@ -2314,9 +2298,8 @@ Allows access if all (<literal>all</literal>) or at least one
 (<literal>any</literal>) of the
 <link doc="ngx_http_access_module.xml">ngx_http_access_module</link>,
 <link doc="ngx_http_auth_basic_module.xml">ngx_http_auth_basic_module</link>,
-<link doc="ngx_http_auth_request_module.xml">ngx_http_auth_request_module</link>,
 or
-<link doc="ngx_http_auth_jwt_module.xml">ngx_http_auth_jwt_module</link>
+<link doc="ngx_http_auth_request_module.xml">ngx_http_auth_request_module</link>
 modules allow access.
 </para>
 
@@ -2667,8 +2650,7 @@ The details of setting up hash tables are provided in a separate
 <syntax>
     <literal>on</literal> |
     <literal>off</literal> |
-    <literal>build</literal> |
-    <value>string</value></syntax>
+    <literal>build</literal></syntax>
 <default>on</default>
 <context>http</context>
 <context>server</context>
@@ -2683,16 +2665,6 @@ Enables or disables emitting nginx version on error pages and in the
 The <literal>build</literal> parameter (1.11.10) enables emitting
 a <link doc="../configure.xml" id="build">build name</link>
 along with nginx version.
-</para>
-
-<para>
-Additionally, as part of our
-<commercial_version>commercial subscription</commercial_version>,
-starting from version 1.9.13
-the signature on error pages and
-the <header>Server</header> response header field value
-can be set explicitly using the <value>string</value> with variables.
-An empty string disables the emission of the <header>Server</header> field.
 </para>
 
 </directive>

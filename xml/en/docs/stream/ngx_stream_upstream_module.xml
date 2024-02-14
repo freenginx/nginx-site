@@ -9,7 +9,7 @@
 <module name="Module ngx_stream_upstream_module"
         link="/en/docs/stream/ngx_stream_upstream_module.html"
         lang="en"
-        rev="39">
+        rev="40">
 
 <section id="summary">
 
@@ -41,35 +41,6 @@ upstream <emphasis>backend</emphasis> {
 server {
     listen 12346;
     proxy_pass <emphasis>backend</emphasis>;
-}
-</example>
-</para>
-
-<para>
-Dynamically configurable group with
-periodic <link doc="ngx_stream_upstream_hc_module.xml">health checks</link> is
-available as part of our
-<commercial_version>commercial subscription</commercial_version>:
-<example>
-resolver 10.0.0.1;
-
-upstream <emphasis>dynamic</emphasis> {
-    zone upstream_dynamic 64k;
-
-    server backend1.example.com:12345 weight=5;
-    server backend2.example.com:12345 fail_timeout=5s slow_start=30s;
-    server 192.0.2.1:12345            max_fails=3;
-    server backend3.example.com:12345 resolve;
-    server backend4.example.com       service=http resolve;
-
-    server backup1.example.com:12345  backup;
-    server backup2.example.com:12345  backup;
-}
-
-server {
-    listen 12346;
-    proxy_pass <emphasis>dynamic</emphasis>;
-    health_check;
 }
 </example>
 </para>
@@ -155,10 +126,6 @@ connections to the proxied server (1.11.5).
 Default value is zero, meaning there is no limit.
 If the server group does not reside in the <link id="zone">shared memory</link>,
 the limitation works per each worker process.
-<note>
-Prior to version 1.11.5, this parameter was available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
 </tag-desc>
 
 <tag-name id="max_fails">
@@ -219,95 +186,9 @@ marks the server as permanently unavailable.
 </para>
 
 <para>
-Additionally,
-the following parameters are available as part of our
-<commercial_version>commercial subscription</commercial_version>:
-<list type="tag">
-
-<tag-name id="resolve">
-<literal>resolve</literal>
-</tag-name>
-<tag-desc>
-monitors changes of the IP addresses
-that correspond to a domain name of the server,
-and automatically modifies the upstream configuration
-without the need of restarting nginx.
-The server group must reside in the <link id="zone">shared memory</link>.
-<para>
-In order for this parameter to work,
-the <literal>resolver</literal> directive
-must be specified in the
-<link doc="ngx_stream_core_module.xml" id="resolver">stream</link> block
-or in the corresponding <link id="resolver">upstream</link> block.
-</para>
-</tag-desc>
-
-<tag-name id="service">
-<literal>service</literal>=<value>name</value>
-</tag-name>
-<tag-desc>
-enables resolving of DNS
-<link url="https://datatracker.ietf.org/doc/html/rfc2782">SRV</link>
-records and sets the service <value>name</value> (1.9.13).
-In order for this parameter to work, it is necessary to specify
-the <link id="resolve"/> parameter for the server
-and specify a hostname without a port number.
-<para>
-If the service name does not contain a dot (“<literal>.</literal>”), then
-the <link url="https://datatracker.ietf.org/doc/html/rfc2782">RFC</link>-compliant name
-is constructed
-and the TCP protocol is added to the service prefix.
-For example, to look up the
-<literal>_http._tcp.backend.example.com</literal> SRV record,
-it is necessary to specify the directive:
-<example>
-server backend.example.com service=http resolve;
-</example>
-If the service name contains one or more dots, then the name is constructed
-by joining the service prefix and the server name.
-For example, to look up the <literal>_http._tcp.backend.example.com</literal>
-and <literal>server1.backend.example.com</literal> SRV records,
-it is necessary to specify the directives:
-<example>
-server backend.example.com service=_http._tcp resolve;
-server example.com service=server1.backend resolve;
-</example>
-</para>
-
-<para>
-Highest-priority SRV records
-(records with the same lowest-number priority value)
-are resolved as primary servers,
-the rest of SRV records are resolved as backup servers.
-If the <link id="backup"/> parameter is specified for the server,
-high-priority SRV records are resolved as backup servers,
-the rest of SRV records are ignored.
-</para>
-</tag-desc>
-
-<tag-name id="slow_start">
-<literal>slow_start</literal>=<value>time</value>
-</tag-name>
-<tag-desc>
-sets the <value>time</value> during which the server will recover its weight
-from zero to a nominal value, when unhealthy server becomes
-<link doc="ngx_stream_upstream_hc_module.xml" id="health_check">healthy</link>,
-or when the server becomes available after a period of time
-it was considered <link id="fail_timeout">unavailable</link>.
-Default value is zero, i.e. slow start is disabled.
 <note>
-The parameter cannot be used along with the
-<link id="hash"/> and <link id="random"/> load balancing methods.
-</note>
-</tag-desc>
-
-</list>
-</para>
-
-<para>
-<note>
-If there is only a single server in a group, <literal>max_fails</literal>,
-<literal>fail_timeout</literal> and <literal>slow_start</literal> parameters
+If there is only a single server in a group,
+<literal>max_fails</literal> and <literal>fail_timeout</literal> parameters
 are ignored, and such a server will never be considered unavailable.
 </note>
 </para>
@@ -326,70 +207,6 @@ memory zone that keeps the group’s configuration and run-time state that are
 shared between worker processes.
 Several groups may share the same zone.
 In this case, it is enough to specify the <value>size</value> only once.
-</para>
-
-<para>
-Additionally,
-as part of our <commercial_version>commercial subscription</commercial_version>,
-such groups allow changing the group membership
-or modifying the settings of a particular server
-without the need of restarting nginx.
-The configuration is accessible via the
-<link doc="../http/ngx_http_api_module.xml">API</link> module (1.13.3).
-<note>
-Prior to version 1.13.3,
-the configuration was accessible only via a special location
-handled by
-<link doc="../http/ngx_http_upstream_conf_module.xml" id="upstream_conf"/>.
-</note>
-</para>
-
-</directive>
-
-
-<directive name="state">
-<syntax><value>file</value></syntax>
-<default/>
-<context>upstream</context>
-<appeared-in>1.9.7</appeared-in>
-
-<para>
-Specifies a <value>file</value> that keeps the state
-of the dynamically configurable group.
-</para>
-
-<para>
-Examples:
-<example>
-state /var/lib/nginx/state/servers.conf; # path for Linux
-state /var/db/nginx/state/servers.conf;  # path for FreeBSD
-</example>
-</para>
-
-<para>
-The state is currently limited to the list of servers with their parameters.
-The file is read when parsing the configuration and is updated each time
-the upstream configuration is
-<link doc="../http/ngx_http_api_module.xml" id="stream_upstreams_stream_upstream_name_servers_">changed</link>.
-Changing the file content directly should be avoided.
-The directive cannot be used
-along with the <link id="server"/> directive.
-</para>
-
-<para>
-<note>
-Changes made during
-<link doc="../control.xml" id="reconfiguration">configuration reload</link>
-or <link doc="../control.xml" id="upgrade">binary upgrade</link>
-can be lost.
-</note>
-</para>
-
-<para>
-<note>
-This directive is available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
 </para>
 
 </directive>
@@ -448,52 +265,6 @@ weighted round-robin balancing method.
 </directive>
 
 
-<directive name="least_time">
-<syntax>
-    <literal>connect</literal> |
-    <literal>first_byte</literal> |
-    <literal>last_byte</literal>
-    [<literal>inflight</literal>]</syntax>
-<default/>
-<context>upstream</context>
-
-<para>
-Specifies that a group should use a load balancing method where a connection
-is passed to the server with the least average time and
-least number of active connections, taking into account weights of servers.
-If there are several such servers, they are tried in turn using a
-weighted round-robin balancing method.
-</para>
-
-<para>
-If the <literal>connect</literal> parameter is specified,
-time to
-<link id="var_upstream_connect_time">connect</link>
-to the upstream server is used.
-If the <literal>first_byte</literal> parameter is specified,
-time to receive the
-<link id="var_upstream_first_byte_time">first byte</link> of data is used.
-If the <literal>last_byte</literal> is specified,
-time to receive the
-<link id="var_upstream_session_time">last byte</link> of data is used.
-If the <literal>inflight</literal> parameter is specified (1.11.6),
-incomplete connections are also taken into account.
-<note>
-Prior to version 1.11.6,
-incomplete connections were taken into account by default.
-</note>
-</para>
-
-<para>
-<note>
-This directive is available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
-</para>
-
-</directive>
-
-
 <directive name="random">
 <syntax>[<literal>two</literal> [<value>method</value>]]</syntax>
 <default/>
@@ -515,108 +286,6 @@ using the specified <literal>method</literal>.
 The default method is <literal>least_conn</literal>
 which passes a connection to a server
 with the least number of active connections.
-</para>
-
-<para id="random_least_time">
-The <literal>least_time</literal> method passes a connection to a server
-with the least average time and least number of active connections.
-If <literal>least_time=connect</literal> parameter is specified,
-time to
-<link id="var_upstream_connect_time">connect</link>
-to the upstream server is used.
-If <literal>least_time=first_byte</literal> parameter is specified,
-time to receive the
-<link id="var_upstream_first_byte_time">first byte</link> of data is used.
-If <literal>least_time=last_byte</literal> is specified,
-time to receive the
-<link id="var_upstream_session_time">last byte</link> of data is used.
-<note>
-The <literal>least_time</literal> method is available as a part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
-</para>
-
-</directive>
-
-
-<directive name="resolver">
-<syntax>
-    <value>address</value> ...
-    [<literal>valid</literal>=<value>time</value>]
-    [<literal>ipv4</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>ipv6</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>status_zone</literal>=<value>zone</value>]</syntax>
-<default/>
-<context>upstream</context>
-<appeared-in>1.17.5</appeared-in>
-
-<para>
-Configures name servers used to resolve names of upstream servers
-into addresses, for example:
-<example>
-resolver 127.0.0.1 [::1]:5353;
-</example>
-The address can be specified as a domain name or IP address,
-with an optional port.
-If port is not specified, the port 53 is used.
-Name servers are queried in a round-robin fashion.
-</para>
-
-<para id="resolver_ipv6">
-By default, nginx will look up both IPv4 and IPv6 addresses while resolving.
-If looking up of IPv4 or IPv6 addresses is not desired,
-the <literal>ipv4=off</literal> (1.23.1) or
-the <literal>ipv6=off</literal> parameter can be specified.
-</para>
-
-<para id="resolver_valid">
-By default, nginx caches answers using the TTL value of a response.
-The optional <literal>valid</literal> parameter allows overriding it:
-<example>
-resolver 127.0.0.1 [::1]:5353 valid=30s;
-</example>
-<note>
-To prevent DNS spoofing, it is recommended
-configuring DNS servers in a properly secured trusted local network.
-</note>
-</para>
-
-<para id="resolver_status_zone">
-The optional <literal>status_zone</literal> parameter
-enables
-<link doc="../http/ngx_http_api_module.xml" id="resolvers_">collection</link>
-of DNS server statistics of requests and responses
-in the specified <value>zone</value>.
-</para>
-
-<para>
-<note>
-This directive is available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
-</para>
-
-</directive>
-
-
-<directive name="resolver_timeout">
-<syntax><value>time</value></syntax>
-<default>30s</default>
-<context>upstream</context>
-<appeared-in>1.17.5</appeared-in>
-
-<para>
-Sets a timeout for name resolution, for example:
-<example>
-resolver_timeout 5s;
-</example>
-</para>
-
-<para>
-<note>
-This directive is available as part of our
-<commercial_version>commercial subscription</commercial_version>.
-</note>
 </para>
 
 </directive>

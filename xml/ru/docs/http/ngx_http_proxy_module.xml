@@ -10,7 +10,7 @@
 <module name="Модуль ngx_http_proxy_module"
         link="/ru/docs/http/ngx_http_proxy_module.html"
         lang="ru"
-        rev="76">
+        rev="77">
 
 <section id="summary">
 
@@ -410,11 +410,7 @@ range-запрос будет передан на проксируемый се�
     [<literal>manager_threshold</literal>=<value>время</value>]
     [<literal>loader_files</literal>=<value>число</value>]
     [<literal>loader_sleep</literal>=<value>время</value>]
-    [<literal>loader_threshold</literal>=<value>время</value>]
-    [<literal>purger</literal>=<literal>on</literal>|<literal>off</literal>]
-    [<literal>purger_files</literal>=<value>число</value>]
-    [<literal>purger_sleep</literal>=<value>время</value>]
-    [<literal>purger_threshold</literal>=<value>время</value>]</syntax>
+    [<literal>loader_threshold</literal>=<value>время</value>]</syntax>
 <default/>
 <context>http</context>
 
@@ -459,16 +455,6 @@ proxy_cache_path /data/nginx/cache levels=1:2 keys_zone=one:10m;
 разделяемой памяти, <value>имя</value> и <value>размер</value> которой
 задаются параметром <literal>keys_zone</literal>.
 Зоны размером в 1 мегабайт достаточно для хранения около 8 тысяч ключей.
-<note>
-Как часть
-<commercial_version>коммерческой подписки</commercial_version>
-в зоне разделяемой памяти также хранится расширенная
-<link doc="ngx_http_api_module.xml" id="http_caches_">информация</link> о кэше,
-поэтому для хранения аналогичного количества ключей необходимо указывать
-больший размер зоны.
-Например
-зоны размером в 1 мегабайт достаточно для хранения около 4 тысяч ключей.
-</note>
 </para>
 
 <para>
@@ -511,118 +497,10 @@ proxy_cache_path /data/nginx/cache levels=1:2 keys_zone=one:10m;
 </para>
 
 <para>
-Кроме того,
-следующие параметры доступны как часть
-<commercial_version>коммерческой подписки</commercial_version>:
-</para>
-
-<para>
-<list type="tag">
-
-<tag-name id="purger">
-<literal>purger</literal>=<literal>on</literal>|<literal>off</literal>
-</tag-name>
-<tag-desc>
-Указывает, будут ли записи в кэше, соответствующие
-<link id="proxy_cache_purge">маске</link>,
-удалены с диска при помощи процесса “cache purger” (1.7.12).
-Установка параметра в значение <literal>on</literal>
-(по умолчанию <literal>off</literal>)
-активирует процесс “cache purger”, который
-проходит по всем записям в кэше
-и удаляет записи, соответствующие этой маске.
-</tag-desc>
-
-<tag-name id="purger_files">
-<literal>purger_files</literal>=<value>число</value>
-</tag-name>
-<tag-desc>
-Задаёт число элементов, которые будут сканироваться за одну итерацию (1.7.12).
-По умолчанию <literal>purger_files</literal> равен 10.
-</tag-desc>
-
-<tag-name id="purger_threshold">
-<literal>purger_threshold</literal>=<value>время</value>
-</tag-name>
-<tag-desc>
-Задаёт продолжительность одной итерации (1.7.12).
-По умолчанию <literal>purger_threshold</literal> равен 50 миллисекундам.
-</tag-desc>
-
-<tag-name id="purger_sleep">
-<literal>purger_sleep</literal>=<value>время</value>
-</tag-name>
-<tag-desc>
-Задаёт паузу между итерациями (1.7.12).
-По умолчанию <literal>purger_sleep</literal> равен 50 миллисекундам.
-</tag-desc>
-
-</list>
-</para>
-
-<para>
 <note>
 В версиях 1.7.3, 1.7.7 и 1.11.10 формат заголовка кэша был изменён.
 При обновлении на более новую версию nginx
 ранее закэшированные ответы будут считаться недействительными.
-</note>
-</para>
-
-</directive>
-
-
-<directive name="proxy_cache_purge">
-<syntax>строка ...</syntax>
-<default/>
-<context>http</context>
-<context>server</context>
-<context>location</context>
-<appeared-in>1.5.7</appeared-in>
-
-<para>
-Задаёт условия, при которых запрос будет считаться запросом
-на очистку кэша.
-Если значение хотя бы одного из строковых параметров непустое и не равно “0”,
-то запись в кэше с соответствующим
-<link id="proxy_cache_key">ключом кэширования</link> удаляется.
-В результате успешной операции возвращается ответ с кодом
-<http-status code="204" text="No Content"/>.
-</para>
-
-<para>
-Если <link id="proxy_cache_key">ключ кэширования</link>
-запроса на очистку заканчивается
-звёздочкой (“<literal>*</literal>”), то все записи в кэше, соответствующие
-этой маске, будут удалены из кэша.
-Тем не менее, эти записи будут оставаться на диске или до момента удаления
-из-за <link id="proxy_cache_path">отсутствия обращения к данным</link>,
-или до обработки их процессом “<link id="purger">cache purger</link>” (1.7.12),
-или до попытки клиента получить к ним доступ.
-</para>
-
-<para>
-Пример конфигурации:
-<example>
-proxy_cache_path /data/nginx/cache keys_zone=cache_zone:10m;
-
-map $request_method $purge_method {
-    PURGE   1;
-    default 0;
-}
-
-server {
-    ...
-    location / {
-        proxy_pass http://backend;
-        proxy_cache cache_zone;
-        proxy_cache_key $uri;
-        proxy_cache_purge $purge_method;
-    }
-}
-</example>
-<note>
-Функциональность доступна как часть
-<commercial_version>коммерческой подписки</commercial_version>.
 </note>
 </para>
 
