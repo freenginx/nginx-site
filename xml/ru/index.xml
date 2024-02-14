@@ -8,7 +8,7 @@
 <article name="nginx"
          link="/ru/"
          lang="ru"
-         rev="162">
+         rev="163">
 
 
 <section>
@@ -203,11 +203,7 @@ PUT, DELETE, MKCOL, COPY и MOVE</link>;
 </listitem>
 
 <listitem>
-Встроенный <link doc="docs/http/ngx_http_perl_module.xml">Perl</link>;
-</listitem>
-
-<listitem>
-сценарный язык <link doc="docs/njs/index.xml">njs</link>.
+Встроенный <link doc="docs/http/ngx_http_perl_module.xml">Perl</link>.
 </listitem>
 
 </list>
@@ -330,11 +326,7 @@ TCP и UDP;</link>
 </listitem>
 
 <listitem>
-<link doc="docs/stream/ngx_stream_split_clients_module.xml">A/B-тестирование</link>;
-</listitem>
-
-<listitem>
-сценарный язык <link doc="docs/njs/index.xml">njs</link>.
+<link doc="docs/stream/ngx_stream_split_clients_module.xml">A/B-тестирование</link>.
 </listitem>
 
 </list>

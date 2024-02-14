@@ -7519,8 +7519,7 @@ Is it possible to implement a desired feature using already
 
 <listitem>
 Is it possible to solve an issue using built-in scripting languages,
-such as <link doc="../http/ngx_http_perl_module.xml">Perl</link>
-or <link doc="../njs/index.xml">njs</link>?
+such as <link doc="../http/ngx_http_perl_module.xml">Perl</link>?
 </listitem>
 
 </list>

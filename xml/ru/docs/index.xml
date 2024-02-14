@@ -8,7 +8,7 @@
 <article name="nginx: документация"
          link="/ru/docs/"
          lang="ru"
-         rev="51"
+         rev="52"
          toc="no">
 
 
@@ -92,14 +92,6 @@
 
 <listitem>
 <link doc="stream/stream_processing.xml"/>
-</listitem>
-
-</list>
-
-<list type="bullet">
-
-<listitem>
-<link doc="njs/index.xml">Создание сценариев на njs</link>
 </listitem>
 
 </list>
@@ -303,11 +295,6 @@ ngx_http_image_filter_module</link>
 <listitem>
 <link doc="http/ngx_http_index_module.xml">
 ngx_http_index_module</link>
-</listitem>
-
-<listitem>
-<link doc="http/ngx_http_js_module.xml">
-ngx_http_js_module</link>
 </listitem>
 
 <listitem>
@@ -516,11 +503,6 @@ ngx_stream_geo_module</link>
 <listitem>
 <link doc="stream/ngx_stream_geoip_module.xml">
 ngx_stream_geoip_module</link>
-</listitem>
-
-<listitem>
-<link doc="stream/ngx_stream_js_module.xml">
-ngx_stream_js_module</link>
 </listitem>
 
 <listitem>

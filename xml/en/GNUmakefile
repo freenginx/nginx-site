@@ -58,7 +58,6 @@ REFS =									\
 		http/ngx_http_headers_module				\
 		http/ngx_http_image_filter_module			\
 		http/ngx_http_index_module				\
-		http/ngx_http_js_module					\
 		http/ngx_http_limit_conn_module				\
 		http/ngx_http_limit_req_module				\
 		http/ngx_http_log_module				\
@@ -99,7 +98,6 @@ REFS =									\
 		stream/ngx_stream_core_module				\
 		stream/ngx_stream_geo_module				\
 		stream/ngx_stream_geoip_module				\
-		stream/ngx_stream_js_module				\
 		stream/ngx_stream_limit_conn_module			\
 		stream/ngx_stream_log_module				\
 		stream/ngx_stream_map_module				\
@@ -114,16 +112,6 @@ REFS =									\
 		stream/stream_processing				\
 		ngx_google_perftools_module				\
 		dev/development_guide					\
-		njs/index						\
-		njs/changes						\
-		njs/cli							\
-		njs/compatibility					\
-		njs/install						\
-		njs/preload_objects					\
-		njs/reference						\
-		njs/security						\
-		njs/node_modules					\
-		njs/typescript						\
 
 TOP =									\
 		download						\
