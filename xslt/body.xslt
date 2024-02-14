@@ -14,7 +14,7 @@
     <div id="menu">
         <h1>
             <a href="/">
-                <img src="/nginx.png" alt="nginx"/>
+                <img src="/nginx.png" alt="free nginx"/>
             </a>
         </h1>
         <div>
