@@ -8,7 +8,7 @@
 <article name="PGP public keys"
          link="/en/pgp_keys.html"
                   lang="en"
-                  rev="3">
+                  rev="4">
 
 <section>
 <para>
@@ -16,22 +16,6 @@
 <listitem>
 <link url="/keys/mdounin.key">Maxim Dounin&rsquo;s
 PGP public key</link>
-</listitem>
-<listitem>
-<link url="/keys/maxim.key">Maxim Konovalov&rsquo;s
-PGP public key</link>
-</listitem>
-<listitem>
-<link url="/keys/sb.key">Sergey Budnevitch&rsquo;s
-PGP public key</link>
-</listitem>
-<listitem>
-<link url="/keys/thresh.key">Konstantin Pavlov&rsquo;s
-PGP public key</link>
-</listitem>
-<listitem>
-<link url="/keys/nginx_signing.key">nginx
-public key (used for signing packages and repositories)</link>
 </listitem>
 </list>
 </para>
