@@ -17,7 +17,7 @@
 <xsl:param select="'../xml'" name="XML"/>
 <xsl:param name="YEAR"/>
 
-<xsl:variable select="'http://nginx.org'" name="SITE"/>
+<xsl:variable select="'http://freenginx.org'" name="SITE"/>
 <xsl:variable select="/news/@link" name="LINK"/>
 
 <xsl:include href="dirname.xslt"/>

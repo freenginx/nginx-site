@@ -19,7 +19,7 @@
 <xsl:param name="ORIGIN"/>
 <xsl:param name="TRANS"/>
 
-<xsl:variable select="'http://nginx.org'" name="SITE"/>
+<xsl:variable select="'http://freenginx.org'" name="SITE"/>
 <xsl:variable select="/news/@link" name="LINK"/>
 <xsl:variable select="/news/@lang" name="LANG"/>
 
