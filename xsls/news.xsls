@@ -18,7 +18,7 @@ X:param YEAR;
 X:param ORIGIN;
 X:param TRANS;
 
-X:var SITE = "'http://nginx.org'";
+X:var SITE = "'http://freenginx.org'";
 X:var LINK = "/news/@link";
 X:var LANG = "/news/@lang";
 
