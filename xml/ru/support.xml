@@ -8,17 +8,17 @@
 <article name="nginx: поддержка"
          link="/ru/support.html"
          lang="ru"
-         rev="11">
+         rev="12">
 
 
 <section name="Списки рассылок">
 
 <para>
 Можно
-<link url="http://nginx.org/mailman/listinfo">просматривать</link>
+<link url="http://freenginx.org/mailman/listinfo">просматривать</link>
 списки рассылок.
 Чтобы написать в список, необходимо вначале
-<link url="http://nginx.org/mailman/listinfo">подписать</link>
+<link url="http://freenginx.org/mailman/listinfo">подписать</link>
 почтовый адрес, который будет использоваться для отправки сообщений.
 </para>
 
@@ -27,39 +27,33 @@
 
 <listitem>
 список
-<link url="http://nginx.org/mailman/listinfo/nginx">nginx@nginx.org</link>
+<link url="http://freenginx.org/mailman/listinfo/nginx">nginx@freenginx.org</link>
 (английский),
-<link url="http://nginx.org/pipermail/nginx/">
-архив</link>,
-<link url="http://dir.gmane.org/gmane.comp.web.nginx.english">
-архив Gmane</link>,
-<link url="http://marc.info/?l=nginx">
-архив MARC</link>
-</listitem>
-
-<listitem>
-список
-<link url="http://nginx.org/mailman/listinfo/nginx-announce">nginx-announce@nginx.org</link>
-(английский),
-<link url="http://nginx.org/pipermail/nginx-announce/">
+<link url="http://freenginx.org/pipermail/nginx/">
 архив</link>
 </listitem>
 
 <listitem>
 список
-<link url="http://nginx.org/mailman/listinfo/nginx-ru">nginx-ru@nginx.org</link>
-(русский),
-<link url="http://nginx.org/pipermail/nginx-ru/">
-архив</link>,
-<link url="http://dir.gmane.org/gmane.comp.web.nginx.russian">
-архив Gmane</link>
+<link url="http://freenginx.org/mailman/listinfo/nginx-announce">nginx-announce@freenginx.org</link>
+(английский),
+<link url="http://freenginx.org/pipermail/nginx-announce/">
+архив</link>
 </listitem>
 
 <listitem>
 список
-<link url="http://nginx.org/mailman/listinfo/nginx-ru-announce">nginx-ru-announce@nginx.org</link>
+<link url="http://freenginx.org/mailman/listinfo/nginx-ru">nginx-ru@freenginx.org</link>
 (русский),
-<link url="http://nginx.org/pipermail/nginx-ru-announce/">
+<link url="http://freenginx.org/pipermail/nginx-ru/">
+архив</link>
+</listitem>
+
+<listitem>
+список
+<link url="http://freenginx.org/mailman/listinfo/nginx-ru-announce">nginx-ru-announce@freenginx.org</link>
+(русский),
+<link url="http://freenginx.org/pipermail/nginx-ru-announce/">
 архив</link>
 </listitem>
 
@@ -76,22 +70,10 @@
 
 <listitem id="nginx_devel">
 Список рассылки для разработчиков
-<link url="http://nginx.org/mailman/listinfo/nginx-devel">nginx-devel@nginx.org</link>
+<link url="http://freenginx.org/mailman/listinfo/nginx-devel">nginx-devel@freenginx.org</link>
 (английский),
-<link url="http://nginx.org/pipermail/nginx-devel/">
+<link url="http://freenginx.org/pipermail/nginx-devel/">
 архив</link>
-</listitem>
-
-<listitem>
-<link url="http://trac.nginx.org/nginx/browser">
-Смотреть исходный код
-</link>
-</listitem>
-
-<listitem>
-<link url="http://trac.nginx.org/nginx/report">
-Сообщить об ошибке
-</link>
 </listitem>
 
 <listitem>
