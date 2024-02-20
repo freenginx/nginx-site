@@ -35,19 +35,21 @@ X:template = "download/item" {
         }
         </td>
 
-        <td width="20%">
+        <td width="30%">
         <a>
         X:attribute "href" {
-            X:text {/download/nginx-} !{@ver} X:text {.tar.gz}
+            X:text {/download/} !{@name} X:text{-} !{@ver}
+            X:text {.tar.gz}
         }
-        X:text {nginx-} !{@ver}
+        !{@name} X:text{-} !{@ver}
         </a>
 
         X:if "@pgp = 'yes'" {
             X:text {&#xA0; }
             <a>
             X:attribute "href" {
-                X:text {/download/nginx-} !{@ver} X:text {.tar.gz.asc}
+                X:text {/download/} !{@name} X:text{-} !{@ver}
+                X:text {.tar.gz.asc}
             }
             X:text {pgp}
             </a>
@@ -58,16 +60,18 @@ X:template = "download/item" {
         X:if "@win= 'yes'" {
             <a>
             X:attribute "href" {
-                X:text {/download/nginx-} !{@ver} X:text {.zip}
+                X:text {/download/} !{@name} X:text{-} !{@ver}
+                X:text {.zip}
             }
-            X:text {nginx/Windows-} !{@ver}
+            !{@name} X:text {/Windows-} !{@ver}
             </a>
 
             X:if "@pgp = 'yes'" {
                 X:text {&#xA0; }
                 <a>
                 X:attribute "href" {
-                    X:text {/download/nginx-} !{@ver} X:text {.zip.asc}
+                    X:text {/download/} !{@name} X:text{-} !{@ver}
+                    X:text {.zip.asc}
                 }
                 X:text {pgp}
                 </a>

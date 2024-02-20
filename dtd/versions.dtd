@@ -15,4 +15,5 @@
            ver          CDATA #REQUIRED
            pgp          (yes | no) "yes"
            win          (yes | no) "yes"
+           name         (nginx | freenginx) "nginx"
 >
