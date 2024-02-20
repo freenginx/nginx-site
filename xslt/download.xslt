@@ -36,19 +36,21 @@
         </xsl:if>
         </td>
 
-        <td width="20%">
+        <td width="30%">
         <a>
         <xsl:attribute name="href">
-            <xsl:text>/download/nginx-</xsl:text> <xsl:value-of select="@ver"/> <xsl:text>.tar.gz</xsl:text>
+            <xsl:text>/download/</xsl:text> <xsl:value-of select="@name"/> <xsl:text>-</xsl:text> <xsl:value-of select="@ver"/>
+            <xsl:text>.tar.gz</xsl:text>
         </xsl:attribute>
-        <xsl:text>nginx-</xsl:text> <xsl:value-of select="@ver"/>
+        <xsl:value-of select="@name"/> <xsl:text>-</xsl:text> <xsl:value-of select="@ver"/>
         </a>
 
         <xsl:if test="@pgp = 'yes'">
             <xsl:text>&#xA0; </xsl:text>
             <a>
             <xsl:attribute name="href">
-                <xsl:text>/download/nginx-</xsl:text> <xsl:value-of select="@ver"/> <xsl:text>.tar.gz.asc</xsl:text>
+                <xsl:text>/download/</xsl:text> <xsl:value-of select="@name"/> <xsl:text>-</xsl:text> <xsl:value-of select="@ver"/>
+                <xsl:text>.tar.gz.asc</xsl:text>
             </xsl:attribute>
             <xsl:text>pgp</xsl:text>
             </a>
@@ -59,16 +61,18 @@
         <xsl:if test="@win= 'yes'">
             <a>
             <xsl:attribute name="href">
-                <xsl:text>/download/nginx-</xsl:text> <xsl:value-of select="@ver"/> <xsl:text>.zip</xsl:text>
+                <xsl:text>/download/</xsl:text> <xsl:value-of select="@name"/> <xsl:text>-</xsl:text> <xsl:value-of select="@ver"/>
+                <xsl:text>.zip</xsl:text>
             </xsl:attribute>
-            <xsl:text>nginx/Windows-</xsl:text> <xsl:value-of select="@ver"/>
+            <xsl:value-of select="@name"/> <xsl:text>/Windows-</xsl:text> <xsl:value-of select="@ver"/>
             </a>
 
             <xsl:if test="@pgp = 'yes'">
                 <xsl:text>&#xA0; </xsl:text>
                 <a>
                 <xsl:attribute name="href">
-                    <xsl:text>/download/nginx-</xsl:text> <xsl:value-of select="@ver"/> <xsl:text>.zip.asc</xsl:text>
+                    <xsl:text>/download/</xsl:text> <xsl:value-of select="@name"/> <xsl:text>-</xsl:text> <xsl:value-of select="@ver"/>
+                    <xsl:text>.zip.asc</xsl:text>
                 </xsl:attribute>
                 <xsl:text>pgp</xsl:text>
                 </a>
