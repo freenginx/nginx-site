@@ -10,7 +10,7 @@
 <module name="Модуль ngx_mail_core_module"
         link="/ru/docs/mail/ngx_mail_core_module.html"
         lang="ru"
-        rev="22">
+        rev="23">
 
 <section id="summary">
 
@@ -246,6 +246,22 @@ FreeBSD 9.0-STABLE)
 <para>
 Предоставляет контекст конфигурационного файла, в котором указываются
 директивы почтового сервера.
+</para>
+
+</directive>
+
+
+<directive name="max_commands">
+<syntax><value>число</value></syntax>
+<default>1000</default>
+<context>mail</context>
+<context>server</context>
+<appeared-in>1.25.5</appeared-in>
+
+<para>
+Задаёт максимальное количество команд, допускаемое в процессе аутентификации.
+Если ограничение достигнуто, а проксирование на бэкенд не началось,
+соединение закрывается.
 </para>
 
 </directive>

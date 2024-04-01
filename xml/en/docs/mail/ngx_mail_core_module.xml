@@ -10,7 +10,7 @@
 <module name="Module ngx_mail_core_module"
         link="/en/docs/mail/ngx_mail_core_module.html"
         lang="en"
-        rev="22">
+        rev="23">
 
 <section id="summary">
 
@@ -242,6 +242,22 @@ and set the probes count (<c-def>TCP_KEEPCNT</c-def>) to 10 probes.
 <para>
 Provides the configuration file context in which the mail server directives
 are specified.
+</para>
+
+</directive>
+
+
+<directive name="max_commands">
+<syntax><value>number</value></syntax>
+<default>1000</default>
+<context>mail</context>
+<context>server</context>
+<appeared-in>1.25.5</appeared-in>
+
+<para>
+Sets the maximum number of commands allowed during authentication.
+If the limit is reached and proxying to the backend is not started yet,
+the connection is closed.
 </para>
 
 </directive>
