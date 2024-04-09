@@ -35,7 +35,7 @@
 <item />
 
 <item href="/" lang="en"> новости </item>
-<item href="/ru/"> об nginx </item>
+<item href="/ru/"> о freenginx </item>
 <item href="/ru/download.html"> скачать </item>
 <item href="/en/security_advisories.html" lang="en"> безопасность </item>
 <item href="/ru/docs/"> документация </item>
