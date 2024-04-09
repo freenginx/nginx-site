@@ -5,7 +5,7 @@
 
 <!DOCTYPE article SYSTEM "../../dtd/article.dtd">
 
-<article name="nginx security advisories"
+<article name="freenginx security advisories"
          link="/en/security_advisories.html"
          lang="en"
          rev="2">
@@ -13,7 +13,7 @@
 <section>
 
 <para>
-All nginx security issues should be reported to
+All freenginx security issues should be reported to
 <link url="mailto:security-alert@freenginx.org">
 security-alert@freenginx.org</link>.
 </para>
