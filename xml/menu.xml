@@ -22,7 +22,6 @@
 <item href="/en/security_advisories.html"> security </item>
 <item href="/en/docs/"> documentation </item>
 <item href="/en/docs/faq.html"> faq </item>
-<item href="/en/books.html"> books </item>
 <item href="/en/support.html"> support </item>
 
 </menu>
@@ -40,7 +39,6 @@
 <item href="/en/security_advisories.html" lang="en"> безопасность </item>
 <item href="/ru/docs/"> документация </item>
 <item href="/ru/docs/faq.html"> faq </item>
-<item href="/en/books.html" lang="en"> книги </item>
 <item href="/ru/support.html"> поддержка </item>
 
 </menu>
