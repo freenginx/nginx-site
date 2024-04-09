@@ -5,10 +5,10 @@
 
 <!DOCTYPE article SYSTEM "../../dtd/article.dtd">
 
-<article name="nginx: download"
+<article name="freenginx download"
          link="/en/download.html"
          lang="en"
-         rev="6">
+         rev="7">
 
 
 <section name="Mainline version">
