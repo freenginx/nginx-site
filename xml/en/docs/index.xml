@@ -5,10 +5,10 @@
 
 <!DOCTYPE article SYSTEM "../../../dtd/article.dtd">
 
-<article name="nginx documentation"
+<article name="freenginx documentation"
          link="/en/docs/"
          lang="en"
-         rev="52"
+         rev="53"
          toc="no">
 
 
