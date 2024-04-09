@@ -5,33 +5,20 @@
 
 <!DOCTYPE article SYSTEM "../../dtd/article.dtd">
 
-<article name="nginx"
+<article name="freenginx"
          link="/en/"
          lang="en"
-         rev="163">
+         rev="164">
 
 
 <section>
 
 <para>
-nginx [engine x] is an HTTP and reverse proxy server,
+freenginx is an effort to preserve free and open development of
+nginx [engine x], an HTTP and reverse proxy server,
 a mail proxy server,
 and a generic TCP/UDP proxy server,
 originally written by <link url="http://sysoev.ru/en/">Igor Sysoev</link>.
-For a long time, it has been running
-on many heavily loaded Russian sites including
-<link url="http://www.yandex.ru">Yandex</link>,
-<link url="http://mail.ru">Mail.Ru</link>,
-<link url="http://vk.com">VK</link>, and
-<link url="http://www.rambler.ru">Rambler</link>.
-According to Netcraft, nginx served or proxied
-<link url="https://www.netcraft.com/blog/january-2024-web-server-survey/">20.71%
-busiest sites in January 2024</link>.
-Here are some of the success stories:
-<link url="https://blogs.dropbox.com/tech/2017/09/optimizing-web-servers-for-high-throughput-and-low-latency/">Dropbox</link>,
-<link url="https://openconnect.netflix.com/en/software/">Netflix</link>,
-<link url="https://www.nginx.com/case-studies/nginx-wordpress-com/">Wordpress.com</link>,
-<link url="http://blog.fastmail.fm/2007/01/04/webimappop-frontend-proxies-changed-to-nginx/">FastMail.FM</link>.
 </para>
 
 <para>
