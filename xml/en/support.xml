@@ -5,10 +5,10 @@
 
 <!DOCTYPE article SYSTEM "../../dtd/article.dtd">
 
-<article name="nginx: support"
+<article name="freenginx: support"
          link="/en/support.html"
          lang="en"
-         rev="12">
+         rev="13">
 
 
 <section name="Mailing Lists">
