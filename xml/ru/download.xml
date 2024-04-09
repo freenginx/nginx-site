@@ -8,12 +8,19 @@
 <article name="nginx: скачать"
          link="/ru/download.html"
          lang="ru"
-         rev="5">
+         rev="6">
 
 
 <section name="Основная версия">
 
 <download last="1" tag="mainline" />
+
+</section>
+
+
+<section name="Стабильная версия">
+
+<download last="1" tag="stable" />
 
 </section>
 

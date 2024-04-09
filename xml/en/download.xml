@@ -8,7 +8,7 @@
 <article name="nginx: download"
          link="/en/download.html"
          lang="en"
-         rev="5">
+         rev="6">
 
 
 <section name="Mainline version">
@@ -16,6 +16,14 @@
 <download last="1" tag="mainline" />
 
 </section>
+
+
+<section name="Stable version">
+
+<download last="1" tag="stable" />
+
+</section>
+
 
 <section name="Source Code">
 
