@@ -5,20 +5,20 @@
 
 <!DOCTYPE article SYSTEM "../../../dtd/article.dtd">
 
-<article name="nginx for Windows"
+<article name="freenginx for Windows"
          link="/en/docs/windows.html"
          lang="en"
-         rev="5">
+         rev="6">
 
 <section>
 
 <para>
-Version of nginx for Windows uses the native Win32 API (not the Cygwin emulation
-layer).
+Version of freenginx for Windows uses the native Win32 API
+(not the Cygwin emulation layer).
 Only the <c-func>select</c-func> and <c-func>poll</c-func> (1.15.9)
 connection processing methods are currently used,
 so high performance and scalability should not be expected.
-Due to this and some other known issues version of nginx for Windows
+Due to this and some other known issues version of freenginx for Windows
 is considered to be a <i>beta</i> version.
 At this time, it provides almost the same functionality as a UNIX version
 of nginx except for
@@ -26,18 +26,18 @@ XSLT filter, image filter, GeoIP module, and embedded Perl language.
 </para>
 
 <para>
-To install nginx/Windows, <link doc="../download.xml">download</link>
+To install freenginx/Windows, <link doc="../download.xml">download</link>
 the latest mainline version distribution (<mainline_version/>),
 since the mainline branch of nginx contains all known fixes.
 Then unpack the distribution, go to the
-nginx-<mainline_version/>
+freenginx-<mainline_version/>
 directory, and run <command>nginx</command>.
 Here is an example for the drive C: root directory:
 
 <programlisting>
 cd c:\
-unzip nginx-<mainline_version/>.zip
-cd nginx-<mainline_version/>
+unzip freenginx-<mainline_version/>.zip
+cd freenginx-<mainline_version/>
 start nginx
 </programlisting>
 
@@ -63,10 +63,10 @@ for the reason in the <path>logs\error.log</path> file.
 </para>
 
 <para>
-nginx/Windows uses the directory where it has been run as the prefix
+freenginx/Windows uses the directory where it has been run as the prefix
 for relative paths in the configuration.
 In the example above, the prefix is
-<path>C:\nginx-<mainline_version/>\</path>.
+<path>C:\freenginx-<mainline_version/>\</path>.
 Paths in a configuration file must be specified in UNIX-style using
 forward slashes:
 
@@ -77,7 +77,7 @@ root         C:/web/html;
 </para>
 
 <para>
-nginx/Windows runs as a standard console application (not a service),
+freenginx/Windows runs as a standard console application (not a service),
 and it can be managed using the following commands:
 
 <table note="yes">
