@@ -6,7 +6,7 @@
 
 <!DOCTYPE news SYSTEM "../dtd/news.dtd">
 
-<news name="nginx news" link="/" lang="en">
+<news name="freenginx news" link="/" lang="en">
 
 <event date="2024-04-09">
 <para>
