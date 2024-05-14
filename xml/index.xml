@@ -8,6 +8,16 @@
 
 <news name="freenginx news" link="/" lang="en">
 
+<event date="2024-05-14">
+<para>
+<link doc="en/download.xml">freenginx-1.27.0</link>
+mainline version has been released,
+featuring better handling of errors during reading request bodies
+and <link doc="en/docs/ngx_core_module.xml" id="pid">PID file</link>
+writing improvements.
+</para>
+</event>
+
 <event date="2024-04-09">
 <para>
 <link doc="en/download.xml">freenginx-1.26.0</link>

@@ -1,4 +1,42 @@
 
+Changes with freenginx 1.27.0                                    14 May 2024
+
+    *) Feature: updated descriptions of HTTP status codes.
+       Thanks to Michiel W. Beijen.
+
+    *) Change: now, if an error occurs during reading a request body, the
+       request body is automatically discarded, and for complex error
+       processing, such as proxying, it is no longer needed to explicitly
+       disable passing of the request body to the proxied server.
+
+    *) Change: the logging level of the "SSL alert number N" and "invalid
+       alert" SSL errors has been lowered from "crit" to "info".
+
+    *) Change: now freenginx always returns an error if a header name is not
+       followed by a colon.
+       Thanks to Maksim Yevmenkin.
+
+    *) Feature: the "off" parameter of the "pid" directive.
+
+    *) Feature: now during reconfiguration no attempt to recreate the PID
+       file is made if the name in the "pid" directive was changed, but
+       points to the same file via symlinks.
+
+    *) Workaround: "PID file ... not readable (yet?) after start" and
+       "Failed to parse PID from file..." errors might appear when starting
+       with systemd.
+
+    *) Bugfix: no error was written to the error log when a timeout occurred
+       during reading a request body.
+
+    *) Bugfix: redirecting errors with code 413 with the "error_page"
+       directive worked incorrectly when using HTTP/2 and HTTP/3.
+
+    *) Bugfix: freenginx could not be built on NetBSD 10.0.
+
+    *) Bugfix: in HTTP/3.
+
+
 Changes with freenginx 1.25.5                                    02 Apr 2024
 
     *) Change: MIME type for the "bmp" extension has been changed to
