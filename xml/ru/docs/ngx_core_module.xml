@@ -10,7 +10,7 @@
 <module name="Основная функциональность"
         link="/ru/docs/ngx_core_module.html"
         lang="ru"
-        rev="27">
+        rev="28">
 
 <section id="example" name="Пример конфигурации">
 
@@ -401,12 +401,13 @@ load_module modules/ngx_mail_module.so;
 
 
 <directive name="pid">
-<syntax><value>файл</value></syntax>
+<syntax><value>файл</value> | <literal>off</literal></syntax>
 <default>logs/nginx.pid</default>
 <context>main</context>
 
 <para>
 Задаёт <value>файл</value>, в котором будет храниться номер (PID) главного процесса.
+Параметр <literal>off</literal> (1.27.0) отключает запись PID-файла.
 </para>
 
 </directive>
