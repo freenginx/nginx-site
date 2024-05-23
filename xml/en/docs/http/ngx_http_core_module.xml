@@ -10,7 +10,7 @@
 <module name="Module ngx_http_core_module"
         link="/en/docs/http/ngx_http_core_module.html"
         lang="en"
-        rev="107">
+        rev="108">
 
 <section id="directives" name="Directives">
 
@@ -1773,6 +1773,31 @@ Enables or disables logging of errors about not found files into
 <para>
 Enables or disables logging of subrequests into
 <link doc="ngx_http_log_module.xml" id="access_log"/>.
+</para>
+
+</directive>
+
+
+<directive name="max_headers">
+<syntax><value>number</value></syntax>
+<default>1000</default>
+<context>http</context>
+<context>server</context>
+<appeared-in>1.27.1</appeared-in>
+
+<para>
+Limits the maximum allowed number of client request header fields.
+If the limit is exceeded, the
+<http-status code="400" text="Bad Request"/>
+error is returned to the client.
+</para>
+
+<para>
+If the directive is specified on the <link id="server"/> level,
+the value from the default server can be used.
+Details are provided in the
+“<link doc="server_names.xml" id="virtual_server_selection">Virtual
+server selection</link>” section.
 </para>
 
 </directive>

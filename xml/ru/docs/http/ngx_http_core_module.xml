@@ -10,7 +10,7 @@
 <module name="Модуль ngx_http_core_module"
         link="/ru/docs/http/ngx_http_core_module.html"
         lang="ru"
-        rev="107">
+        rev="108">
 
 <section id="directives" name="Директивы">
 
@@ -1769,6 +1769,30 @@ location = /user {
 Разрешает или запрещает записывать в
 <link doc="ngx_http_log_module.xml" id="access_log"/>
 подзапросы.
+</para>
+
+</directive>
+
+
+<directive name="max_headers">
+<syntax><value>число</value></syntax>
+<default>1000</default>
+<context>http</context>
+<context>server</context>
+<appeared-in>1.27.1</appeared-in>
+
+<para>
+Ограничивает максимальное допустимое число полей заголовка запроса клиента.
+При превышении указанного ограничения клиенту возвращается ошибка
+<http-status code="400" text="Bad Request"/>.
+</para>
+
+<para>
+Если директива указана на уровне <link id="server"/>,
+то может использоваться значение из сервера по умолчанию.
+Подробнее см. в разделе
+“<link doc="server_names.xml" id="virtual_server_selection">Выбор
+виртуального сервера</link>”.
 </para>
 
 </directive>

@@ -8,7 +8,7 @@
 <article name="Server names"
          link="/en/docs/http/server_names.html"
          lang="en"
-         rev="4"
+         rev="5"
          author="Igor Sysoev"
          editor="Brian Mercer">
 
@@ -404,6 +404,7 @@ the server configuration chosen by SNI;
 in case of the
 <link doc="ngx_http_core_module.xml" id="ignore_invalid_headers"/>,
 <link doc="ngx_http_core_module.xml" id="large_client_header_buffers"/>,
+<link doc="ngx_http_core_module.xml" id="max_headers"/>,
 and
 <link doc="ngx_http_core_module.xml" id="underscores_in_headers"/> directives
 involved in processing request header fields,
