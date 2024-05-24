@@ -10,7 +10,7 @@
 <module name="Module ngx_http_upstream_module"
         link="/en/docs/http/ngx_http_upstream_module.html"
         lang="en"
-        rev="89">
+        rev="90">
 
 <section id="summary">
 
@@ -572,6 +572,12 @@ number of bytes sent to an upstream server (1.15.8).
 Values from several connections
 are separated by commas and colons like addresses in the
 <link id="var_upstream_addr">$upstream_addr</link> variable.
+</tag-desc>
+
+<tag-name id="var_upstream_cache_key"><var>$upstream_cache_key</var>
+</tag-name>
+<tag-desc>
+the cache key being used (1.27.1).
 </tag-desc>
 
 <tag-name id="var_upstream_cache_status"><var>$upstream_cache_status</var>

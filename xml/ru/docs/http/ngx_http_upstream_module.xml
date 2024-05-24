@@ -10,7 +10,7 @@
 <module name="Модуль ngx_http_upstream_module"
         link="/ru/docs/http/ngx_http_upstream_module.html"
         lang="ru"
-        rev="89">
+        rev="90">
 
 <section id="summary">
 
@@ -579,6 +579,12 @@ server {
 Значения нескольких соединений
 разделяются запятыми и двоеточиями подобно адресам в переменной
 <link id="var_upstream_addr">$upstream_addr</link>.
+</tag-desc>
+
+<tag-name id="var_upstream_cache_key"><var>$upstream_cache_key</var>
+</tag-name>
+<tag-desc>
+используемый ключ кэширования (1.27.1).
 </tag-desc>
 
 <tag-name id="var_upstream_cache_status"><var>$upstream_cache_status</var>
