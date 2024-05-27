@@ -8,7 +8,7 @@
 <article name="freenginx: скачать"
          link="/ru/download.html"
          lang="ru"
-         rev="7">
+         rev="8">
 
 
 <section name="Основная версия">
@@ -28,14 +28,17 @@
 <section name="Исходный код">
 
 <para>
-Репозитории Mercurial, доступные только для чтения:
+Репозитории Mercurial с исходным кодом:
 <list type="bullet">
 
 <listitem>
-код: <literal>http://freenginx.org/hg/nginx</literal>
+код: <link url="/hg/nginx">http://freenginx.org/hg/nginx</link>
 </listitem>
 <listitem>
-сайт: <literal>http://freenginx.org/hg/nginx-site</literal>
+сайт: <link url="/hg/nginx-site">http://freenginx.org/hg/nginx-site</link>
+</listitem>
+<listitem>
+тесты: <link url="/hg/nginx-tests">http://freenginx.org/hg/nginx-tests</link>
 </listitem>
 
 </list>

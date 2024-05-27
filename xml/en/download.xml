@@ -8,7 +8,7 @@
 <article name="freenginx download"
          link="/en/download.html"
          lang="en"
-         rev="7">
+         rev="8">
 
 
 <section name="Mainline version">
@@ -28,14 +28,17 @@
 <section name="Source Code">
 
 <para>
-Read-only Mercurial repositories:
+Mercurial repositories with source code:
 <list type="bullet">
 
 <listitem>
-code: <literal>http://freenginx.org/hg/nginx</literal>
+code: <link url="/hg/nginx">http://freenginx.org/hg/nginx</link>
 </listitem>
 <listitem>
-site: <literal>http://freenginx.org/hg/nginx-site</literal>
+site: <link url="/hg/nginx-site">http://freenginx.org/hg/nginx-site</link>
+</listitem>
+<listitem>
+tests: <link url="/hg/nginx-tests">http://freenginx.org/hg/nginx-tests</link>
 </listitem>
 
 </list>
