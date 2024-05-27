@@ -8,7 +8,7 @@
 <article name="freenginx download"
          link="/en/download.html"
          lang="en"
-         rev="8">
+         rev="9">
 
 
 <section name="Mainline version">
@@ -42,6 +42,11 @@ tests: <link url="/hg/nginx-tests">http://freenginx.org/hg/nginx-tests</link>
 </listitem>
 
 </list>
+</para>
+
+<para>
+Alternatively, <link url="https://github.com/freenginx/">Github mirror</link>
+is available.
 </para>
 
 </section>

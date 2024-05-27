@@ -8,7 +8,7 @@
 <article name="freenginx: скачать"
          link="/ru/download.html"
          lang="ru"
-         rev="8">
+         rev="9">
 
 
 <section name="Основная версия">
@@ -42,6 +42,11 @@
 </listitem>
 
 </list>
+</para>
+
+<para>
+Также доступно
+<link url="https://github.com/freenginx/">зеркало на Github</link>.
 </para>
 
 </section>
