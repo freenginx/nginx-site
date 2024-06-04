@@ -8,6 +8,13 @@
 
 <news name="freenginx news" link="/" lang="en">
 
+<event date="2024-06-04">
+<para>
+<link doc="en/download.xml">freenginx-1.27.1</link>
+mainline version has been released.
+</para>
+</event>
+
 <event date="2024-05-14">
 <para>
 <link doc="en/download.xml">freenginx-1.27.0</link>
