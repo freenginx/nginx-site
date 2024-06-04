@@ -10,7 +10,7 @@
 <module name="Модуль ngx_mail_auth_http_module"
         link="/ru/docs/mail/ngx_mail_auth_http_module.html"
         lang="ru"
-        rev="11">
+        rev="12">
 
 <section id="directives" name="Директивы">
 
@@ -198,6 +198,18 @@ Auth-SMTP-Helo: client.example.org
 Auth-SMTP-From: MAIL FROM: &lt;&gt;
 Auth-SMTP-To: RCPT TO: &lt;postmaster@mail.example.com&gt;
 </example>
+</para>
+
+<para>
+Для методов аутентификации XOAUTH2 and OAUTHBEARER (1.27.1)
+в заголовке <header>Auth-Error-SASL</header>
+можно вернуть информацию об ошибке
+в форме дополнительного SASL challenge в base64
+(<link
+url="https://developers.google.com/gmail/imap/xoauth2-protocol#error_response"
+>XOAUTH2</link>,
+<link url="https://datatracker.ietf.org/doc/html/rfc7628#section-3.2.2"
+>OAUTHBEARER</link>).
 </para>
 
 <para>

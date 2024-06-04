@@ -10,7 +10,7 @@
 <module name="Модуль ngx_mail_pop3_module"
         link="/ru/docs/mail/ngx_mail_pop3_module.html"
         lang="ru"
-        rev="5">
+        rev="6">
 
 <section id="directives" name="Директивы">
 
@@ -47,6 +47,18 @@
 <tag-name><literal>external</literal></tag-name>
 <tag-desc>
 <link url="https://datatracker.ietf.org/doc/html/rfc4422">AUTH EXTERNAL</link> (1.11.6).
+</tag-desc>
+
+<tag-name><literal>xoauth2</literal></tag-name>
+<tag-desc>
+<link url="https://developers.google.com/gmail/imap/xoauth2-protocol"
+>AUTH XOAUTH2</link> (1.27.1).
+</tag-desc>
+
+<tag-name><literal>oauthbearer</literal></tag-name>
+<tag-desc>
+<link url="https://datatracker.ietf.org/doc/html/rfc7628"
+>AUTH OAUTHBEARER</link> (1.27.1).
 </tag-desc>
 
 </list>

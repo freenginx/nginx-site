@@ -10,7 +10,7 @@
 <module name="Module ngx_mail_smtp_module"
         link="/en/docs/mail/ngx_mail_smtp_module.html"
         lang="en"
-        rev="8">
+        rev="9">
 
 <section id="directives" name="Directives">
 
@@ -46,6 +46,18 @@ In order for this method to work, the password must be stored unencrypted.
 <tag-name><literal>external</literal></tag-name>
 <tag-desc>
 <link url="https://datatracker.ietf.org/doc/html/rfc4422">AUTH EXTERNAL</link> (1.11.6).
+</tag-desc>
+
+<tag-name><literal>xoauth2</literal></tag-name>
+<tag-desc>
+<link url="https://developers.google.com/gmail/imap/xoauth2-protocol"
+>AUTH XOAUTH2</link> (1.27.1).
+</tag-desc>
+
+<tag-name><literal>oauthbearer</literal></tag-name>
+<tag-desc>
+<link url="https://datatracker.ietf.org/doc/html/rfc7628"
+>AUTH OAUTHBEARER</link> (1.27.1).
 </tag-desc>
 
 <tag-name><literal>none</literal></tag-name>
