@@ -10,7 +10,7 @@
 <module name="Module ngx_http_perl_module"
         link="/en/docs/http/ngx_http_perl_module.html"
         lang="en"
-        rev="7">
+        rev="8">
 
 <section id="summary">
 
@@ -320,7 +320,8 @@ supports redirections to named locations.
 <value>message</value>)</literal></tag-name>
 <tag-desc>
 writes the specified <value>message</value> into the
-<link doc="../ngx_core_module.xml" id="error_log"/>.
+<link doc="../ngx_core_module.xml" id="error_log"/>
+at the <literal>error</literal> level.
 If <value>errno</value> is non-zero, an error code and its description
 will be appended to the message.
 </tag-desc>

@@ -10,7 +10,7 @@
 <module name="Модуль ngx_http_perl_module"
         link="/ru/docs/http/ngx_http_perl_module.html"
         lang="ru"
-        rev="7">
+        rev="8">
 
 <section id="summary">
 
@@ -320,7 +320,8 @@ __END__
 <value>сообщение</value>)</literal></tag-name>
 <tag-desc>
 записывает указанное <value>сообщение</value> в
-<link doc="../ngx_core_module.xml" id="error_log"/>.
+<link doc="../ngx_core_module.xml" id="error_log"/>
+на уровне <literal>error</literal>.
 Если <value>код_ошибки</value> ненулевой, то к сообщению будет добавлен
 код ошибки и её описание.
 </tag-desc>
