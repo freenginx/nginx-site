@@ -10,7 +10,7 @@
 <module name="Основная функциональность"
         link="/ru/docs/ngx_core_module.html"
         lang="ru"
-        rev="28">
+        rev="29">
 
 <section id="example" name="Пример конфигурации">
 
@@ -208,7 +208,10 @@ env OPENSSL_ALLOW_PROXY_CERTS=1;
 
 
 <directive name="error_log">
-<syntax><value>файл</value> [<value>уровень</value>]</syntax>
+<syntax>
+    <value>файл</value>
+    [<value>уровень</value>]
+    [<literal>rate</literal>=<value>скорость</value>]</syntax>
 <default>logs/error.log error</default>
 <context>main</context>
 <context>http</context>
@@ -256,7 +259,20 @@ env OPENSSL_ALLOW_PROXY_CERTS=1;
 nginx с <literal>--with-debug</literal>,
 см. “<link doc="debugging_log.xml"/>”.
 </note>
+</para>
 
+<para>
+Параметр <literal>rate</literal> (1.27.2) задаёт
+максимально допустимую скорость записи в лог в сообщениях в секунду (m/s)
+для каждого рабочего процесса.
+По умолчанию используется <literal>rate=1000m/s</literal>.
+Установка <literal>скорости</literal> в 0 отключает ограничение скорости.
+Кроме того, ограничение скорости не используется,
+если уровень лога установлен в <literal>debug</literal> или
+отладочный лог включён для <link id="debug_connection">соединения</link>.
+</para>
+
+<para>
 <note>
 Директива может быть указана на
 уровне <literal>stream</literal>
