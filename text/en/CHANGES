@@ -1,4 +1,25 @@
 
+Changes with freenginx 1.29.6                                    10 Mar 2026
+
+    *) Bugfix: incorrect "upstream server temporarily disabled" messages
+       might be logged when using variables in the "proxy_pass" directive.
+
+    *) Bugfix: retrying a request to the next gRPC upstream server might not
+       work correctly.
+       Thanks to David Carlier.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_xslt_filter_module was used.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_mp4_module was used.
+
+    *) Bugfix: in the ngx_http_uwsgi_module and ngx_http_scgi_module
+       modules.
+
+    *) Bugfix: in memory allocation error handling.
+
+
 Changes with freenginx 1.29.5                                    10 Feb 2026
 
     *) Feature: optimized SSL_sendfile() usage on FreeBSD.
