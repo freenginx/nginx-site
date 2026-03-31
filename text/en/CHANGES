@@ -1,4 +1,19 @@
 
+Changes with freenginx 1.29.7                                    31 Mar 2026
+
+    *) Feature: OpenSSL 4.0 compatibility.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_dav_module was used to handle COPY and MOVE methods in a
+       location with the "alias" directive.
+
+    *) Bugfix: client host name was not escaped in requests to the
+       authentication server and in the XCLIENT command if the "resolver"
+       directive was used in the SMTP proxy.
+
+    *) Bugfix: in the mail proxy module.
+
+
 Changes with freenginx 1.29.6                                    10 Mar 2026
 
     *) Bugfix: incorrect "upstream server temporarily disabled" messages
