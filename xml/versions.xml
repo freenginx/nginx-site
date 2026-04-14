@@ -10,6 +10,13 @@
 <download tag="mainline" changes="">
 
 <item ver="1.29.7" name="freenginx" />
+
+</download>
+
+
+<download tag="stable" changes="1.30">
+
+<item ver="1.30.0" name="freenginx" />
 <item ver="1.29.6" name="freenginx" />
 <item ver="1.29.5" name="freenginx" />
 <item ver="1.29.4" name="freenginx" />
@@ -21,7 +28,7 @@
 </download>
 
 
-<download tag="stable" changes="1.28">
+<download tag="legacy" changes="1.28">
 
 <item ver="1.28.0" name="freenginx" />
 <item ver="1.27.6" name="freenginx" />
