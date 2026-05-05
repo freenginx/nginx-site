@@ -1,4 +1,26 @@
 
+Changes with freenginx 1.31.0                                    05 May 2026
+
+    *) Change: now the "try_files" directive can be used with arguments
+       starting with the request URI inside a location given by a regular
+       expression, along with the "alias" directive.
+
+    *) Bugfix: the "try_files" directive might work incorrectly when used
+       with the "alias" directive.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "try_files" and "proxy_pass" directives were used together.
+
+    *) Bugfix: the "proxy_pass" directive without a URI part might use the
+       original request URI after the URI was changed by the "try_files"
+       directive.
+
+    *) Change: the logging level of the "invalid ccs message", "not on
+       record boundary", "required compression algorithm missing", and some
+       "record layer failure" SSL errors has been lowered from "crit" to
+       "info".
+
+
 Changes with freenginx 1.29.7                                    31 Mar 2026
 
     *) Feature: OpenSSL 4.0 compatibility.
