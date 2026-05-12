@@ -43,7 +43,7 @@ location / {
 <section id="directives" name="Directives">
 
 <directive name="index">
-<syntax><value>file</value> ...</syntax>
+<syntax><value>file</value> ... | <literal>off</literal></syntax>
 <default>index.html</default>
 <context>http</context>
 <context>server</context>
@@ -54,6 +54,7 @@ Defines files that will be used as an index.
 The <value>file</value> name can contain variables.
 Files are checked in the specified order.
 The last element of the list can be a file with an absolute path.
+The <literal>off</literal> parameter (1.31.1) disables use of index files.
 Example:
 <example>
 index index.$geo.html index.0.html /index.html;

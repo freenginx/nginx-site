@@ -42,7 +42,7 @@ location / {
 <section id="directives" name="Директивы">
 
 <directive name="index">
-<syntax><value>файл</value> ...</syntax>
+<syntax><value>файл</value> ... | <literal>off</literal></syntax>
 <default>index.html</default>
 <context>http</context>
 <context>server</context>
@@ -53,6 +53,8 @@ location / {
 В имени файла можно использовать переменные.
 Наличие файлов проверяется в порядке их перечисления.
 В конце списка может стоять файл с абсолютным путём.
+Параметр <literal>off</literal> (1.31.1) запрещает использование
+индексных файлов.
 Пример:
 <example>
 index index.$geo.html index.0.html /index.html;
