@@ -1,4 +1,31 @@
 
+Changes with freenginx 1.31.1                                    19 May 2026
+
+    *) Feature: the "off" parameter of the "index" directive.
+       Thanks to Fabiano Furtado.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "rewrite" directive was used to change request arguments and other
+       directives of the ngx_http_rewrite_module were executed afterwards.
+
+    *) Bugfix: in the "set" directive.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_charset_module was used to convert responses from UTF-8.
+
+    *) Bugfix: in the ngx_http_charset_module.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "ssl_ocsp" directive was used.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "scgi_pass" or "uwsgi_pass" directives were used.
+
+    *) Bugfix: in the "scgi_request_buffering" directive.
+
+    *) Bugfix: in HTTP/3.
+
+
 Changes with freenginx 1.31.0                                    05 May 2026
 
     *) Change: now the "try_files" directive can be used with arguments
