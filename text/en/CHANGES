@@ -1,4 +1,13 @@
 
+Changes with freenginx 1.31.2                                    26 May 2026
+
+    *) Bugfix: a segmentation fault might occur in a worker process if
+       nested captures were used in the "rewrite" directive.
+
+    *) Bugfix: the "if" directive incorrectly handled relative paths when
+       checking files.
+
+
 Changes with freenginx 1.31.1                                    19 May 2026
 
     *) Feature: the "off" parameter of the "index" directive.
