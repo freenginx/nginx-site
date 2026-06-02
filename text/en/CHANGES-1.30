@@ -1,4 +1,30 @@
 
+Changes with freenginx 1.30.1                                    02 Jun 2026
+
+    *) Change: the logging level of the "invalid ccs message", "not on
+       record boundary", "required compression algorithm missing", and some
+       "record layer failure" SSL errors has been lowered from "crit" to
+       "info".
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "rewrite" directive was used to change request arguments and other
+       directives of the ngx_http_rewrite_module were executed afterwards.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if
+       nested captures were used in the "rewrite" directive.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_charset_module was used to convert responses from UTF-8.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "ssl_ocsp" directive was used.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       "scgi_pass" or "uwsgi_pass" directives were used.
+
+    *) Bugfix: in HTTP/3.
+
+
 Changes with freenginx 1.30.0                                    14 Apr 2026
 
     *) 1.30.x stable branch.

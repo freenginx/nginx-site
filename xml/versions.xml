@@ -18,6 +18,7 @@
 
 <download tag="stable" changes="1.30">
 
+<item ver="1.30.1" name="freenginx" />
 <item ver="1.30.0" name="freenginx" />
 <item ver="1.29.6" name="freenginx" />
 <item ver="1.29.5" name="freenginx" />
