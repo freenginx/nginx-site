@@ -1,4 +1,42 @@
 
+Changes with freenginx 1.31.3                                    07 Jul 2026
+
+    *) Feature: additional checks are now used during variable substitution,
+       including during execution of the ngx_http_rewrite_module directives,
+       to prevent buffer overruns in case of errors in the code.
+
+    *) Bugfix: if the "auth_request_set" directive or regular expression
+       named captures were used to change prefix variables, such as
+       "$http_...", corresponding variables became empty in other parts of
+       the configuration.
+
+    *) Bugfix: changing the $limit_rate and $args variables with the
+       "auth_request_set" directive or regular expression named captures
+       worked incorrectly.
+
+    *) Bugfix: in error handling in the mail proxy module.
+       Thanks to Evan Hellman, Trail of Bits.
+
+    *) Bugfix: in error handling when using gzipping.
+       Thanks to Evan Hellman, Trail of Bits.
+
+    *) Bugfix: in HTTP/3.
+
+    *) Bugfix: a segmentation fault might occur in a worker process when
+       sending very long request header lines to a gRPC backend.
+       Thanks to Evan Hellman, Trail of Bits.
+
+    *) Bugfix: a segmentation fault might occur in a worker process if the
+       ngx_http_charset_module was used to convert responses from UTF-8.
+
+    *) Bugfix: in the ngx_http_perl_module.
+       Thanks to Evan Hellman, Trail of Bits and Axel Mierczuk, Keith
+       Hoodlet, 1Password's Off-by-1 Labs.
+
+    *) Bugfix: in error handling when using the proxy_no_cache directive.
+       Thanks to Valentin Bartenev.
+
+
 Changes with freenginx 1.31.2                                    26 May 2026
 
     *) Bugfix: a segmentation fault might occur in a worker process if
