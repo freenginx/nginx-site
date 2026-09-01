@@ -9,6 +9,7 @@
 
 <download tag="mainline" changes="">
 
+<item ver="1.31.4" name="freenginx" />
 <item ver="1.31.3" name="freenginx" />
 <item ver="1.31.2" name="freenginx" />
 <item ver="1.31.1" name="freenginx" />
